@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hidden</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            min-height: 937px;
+            min-width: 1920px;
+            background: linear-gradient(to left,#123456,#876543);
+            display: grid;
+            display: -ms-grid;
+            -ms-grid-rows:  20% 20% 20% 20% 20%;
+            grid-template-rows: 20% 20% 20% 20% 20%;
+            -ms-grid-columns:  20% 20% 20% 20% 20%;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+        }
+        .hidden{
+            grid-row-start: 1;
+            -ms-grid-row: 1;
+            grid-column-start: 1;
+            -ms-grid-column: 1;
+            background: #999;
+        }
+        .show{
+            grid-row-start: 3;
+            -ms-grid-row: 3;
+            grid-column-start: 3;
+            -ms-grid-column: 3;
+            background: #666666;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="hidden" hidden>
+        hidden
+    </div>
+    <div class="show">
+        show
+    </div>
+</body>
+<script>
+    if(window.innerHeight){
+        document.body.style.minHeight=window.innerHeight+"px";
+    }
+</script>
+</html>

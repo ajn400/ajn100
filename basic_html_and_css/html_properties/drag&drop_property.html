@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>h5拖放</title>
+    <style> .dropzone {
+        width: 100px;
+        height: 100px;
+    }</style>
+</head>
+<style> body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.draggable {
+    width: 100px;
+    height: 100px;
+    background: #123456;
+}
+
+.dropzone {
+    background: #888888;
+}
+
+body > div {
+    margin-top: 50vh;
+    margin-left: 10px;
+}</style>
+<body>
+<div draggable="true" class="draggable"></div>
+<div class="dropzone"></div>
+<div class="dropzone"></div>
+<div class="dropzone"></div>
+<script type="text/javascript"> var dragged;/* 事件在拖拽元素上触发 */
+document.addEventListener("drag", function (event) {
+}, false);/* 事件在拖拽元素上触发 */
+document.addEventListener("dragstart", function (event) {
+    dragged = event.target;
+    event.target.style.opacity = .5;
+}, false);/* 事件在拖拽元素上触发 */
+document.addEventListener("dragend", function (event) {
+    event.target.style.opacity = "";
+}, false);/* 事件在目标区域触发 */
+document.addEventListener("dragover", function (event) {
+    event.preventDefault();
+}, false);/* 事件在目标区域触发 */
+document.addEventListener("dragenter", function (event) {
+    if (event.target.className == "dropzone") {
+        event.target.style.background = "purple";
+    }
+}, false);/* 事件在目标区域触发 */
+document.addEventListener("dragleave", function (event) {
+    if (event.target.className == "dropzone") {
+        event.target.style.background = "";
+    }
+}, false);
+document.addEventListener("drop", function (event) {
+    event.preventDefault();
+    if (event.target.className == "dropzone") {
+        event.target.style.background = "";
+        dragged.parentNode.removeChild(dragged);
+        event.target.appendChild(dragged);
+    }
+}, false);</script>
+</body>
+</html>

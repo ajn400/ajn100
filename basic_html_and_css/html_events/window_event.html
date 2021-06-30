@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window事件</title>
+</head>
+<body onload="onloadFunc()" onunload="onunloadFunc()" onresize="onresizeFunc()" onpagehide="onpagehideFunc()">
+<script>
+    var EventUtil = {
+        addHandler: function (element, type, handler) {
+            if (element.addEventListener) {
+                element.addEventListener(type, handler, false);
+            } else if (element.attachEvent) {
+                element.attachEvent("on" + type, handler);
+            } else {
+                element["on" + type] = handler;
+            }
+        }
+    }
+    var onloadFunc = function () {
+        console.log(window)
+    }
+    var onunloadFunc = function () {
+        window.confirm("are you kidding me")
+    }
+    var onresizeFunc = function () {
+        console.log("onresize")
+    }
+    var onpagehideFunc = function () {
+        console.log("onpagehide")
+    }
+    window.addEventListener("", function () {
+    })
+</script>
+</body>
+</html>

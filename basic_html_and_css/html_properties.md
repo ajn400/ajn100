@@ -1,0 +1,14 @@
+#### html属性
+
+<table class="dataintable"> <tbody><tr> <th style="width:35%;">属性</th> <th>描述</th> </tr><tr> <td><a href="https://www.w3school.com.cn/tags/att_standard_accesskey.asp" title="HTML accesskey 属性">accesskey</a></td> <td>规定激活元素的快捷键。</td> </tr><tr> <td><a href="https://www.w3school.com.cn/tags/att_standard_class.asp" title="HTML class 属性">class</a></td> <td>规定元素的一个或多个类名（引用样式表中的类）。</td> </tr><tr> <td class="html5_new"><a href="https://www.w3school.com.cn/tags/att_global_contenteditable.asp" title="HTML contenteditable 属性">contenteditable</a></td> <td>规定元素内容是否可编辑。</td> </tr><tr> <td class="html5_new"><a href="https://www.w3school.com.cn/tags/att_global_contextmenu.asp" title="HTML contextmenu 属性">contextmenu</a></td> <td>规定元素的上下文菜单。上下文菜单在用户点击元素时显示。</td> </tr><tr> <td class="html5_new"><a href="https://www.w3school.com.cn/tags/att_global_data.asp" title="HTML data-* 属性">data-*</a></td> <td>用于存储页面或应用程序的私有定制数据。</td> </tr><tr> <td><a href="https://www.w3school.com.cn/tags/att_standard_dir.asp" title="HTML dir 属性">dir</a></td> <td>规定元素中内容的文本方向。</td> </tr><tr> <td class="html5_new"><a href="https://www.w3school.com.cn/tags/att_global_draggable.asp" title="HTML draggable 属性">draggable</a></td> <td>规定元素是否可拖动。</td> </tr><tr> <td class="html5_new"><a href="https://www.w3school.com.cn/tags/att_global_dropzone.asp" title="HTML dropzone 属性">dropzone</a></td> <td>规定在拖动被拖动数据时是否进行复制、移动或链接。</td> </tr><tr> <td class="html5_new"><a href="https://www.w3school.com.cn/tags/att_global_hidden.asp" title="HTML hidden 属性">hidden</a></td> <td>规定元素仍未或不再相关。</td> </tr><tr> <td><a href="https://www.w3school.com.cn/tags/att_standard_id.asp" title="HTML id 属性">id</a></td> <td>规定元素的唯一 id。</td> </tr><tr> <td><a href="https://www.w3school.com.cn/tags/att_standard_lang.asp" title="HTML lang 属性">lang</a></td> <td>规定元素内容的语言。</td> </tr><tr> <td class="html5_new"><a href="https://www.w3school.com.cn/tags/att_global_spellcheck.asp" title="HTML spellcheck 属性">spellcheck</a></td> <td>规定是否对元素进行拼写和语法检查。</td> </tr><tr> <td><a href="https://www.w3school.com.cn/tags/att_standard_style.asp" title="HTML style 属性">style</a></td> <td>规定元素的行内 CSS 样式。</td> </tr><tr> <td><a href="https://www.w3school.com.cn/tags/att_standard_tabindex.asp" title="HTML tabindex 属性">tabindex</a></td> <td>规定元素的 tab 键次序。</td> </tr><tr> <td><a href="https://www.w3school.com.cn/tags/att_standard_title.asp" title="HTML title 属性">title</a></td> <td>规定有关元素的额外信息。</td> </tr><tr> <td class="html5_new"><a href="https://www.w3school.com.cn/tags/att_global_translate.asp" title="HTML translate 属性">translate</a></td> <td>规定是否应该翻译元素内容。</td> </tr> </tbody></table>
+
+1. 用户代理会完全忽略前缀为data-的自定义属性，至于什么是用户代理
+
+   - https://baike.sogou.com/v8819996.htm?fromTitle=%E7%94%A8%E6%88%B7%E4%BB%A3%E7%90%86
+   - 例如Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36
+
+2. ```
+   <html lang="en"></html>
+   ```
+
+#### html事件

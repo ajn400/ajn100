@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css背景</title>
+    <style>
+        body{
+            max-width: 1920px;
+            padding-bottom: 200px;
+            background: linear-gradient(to left,#dddddd,#aaaaaa);
+        }
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 62em;
+            height: 35.75em;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+
+        .box1 {
+            background: url("1.jpg") top left, url("2.jpg") top right, url("3.jpg") bottom left, url("4.jpg") bottom right;
+            background-repeat: no-repeat;
+            background-size: 30em 16.875em;
+            }
+
+        .box2{
+            background: #888888;
+            border: 20px solid #555555;
+            padding: 10px;
+            background-clip: content-box;
+        }
+
+        .box3{
+            background: yellowgreen;
+            box-shadow: 0 0 0 10px #212,
+                        0 0 0 15px red,
+                        0 2px 5px 15px rgba(0,0,0,.6);
+        }
+
+        .box4{
+            background: #112233;
+            border: 5px solid #5588aa;
+            outline: 5px solid deeppink;
+            margin-top: 21px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .box5{
+            background: #666666;
+            background-image: url("1.jpg");
+            background-position: bottom 10px right 20px;
+            background-repeat: no-repeat;
+            background-size: 12em 5.75em;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box1">
+    <span>合理使用简写</span>
+</div>
+<div class="box2">
+    <span>使用background-clip(常用于实现半透明边框)</span>
+</div>
+<div class="box3">
+    <span>box-shadow</span>
+</div>
+
+<div class="box4">
+    <span>描边</span>
+    <p>通 过 outline 属 性 实 现 的“ 边
+        框”不会贴合元素的圆角，不过
+        这一行为在未来可能会发生变化</p>
+    <strong>这被css工作组认为是一种bug</strong>
+</div>
+
+<div class="box5">
+    <span>backgroound-position灵活定位</span>
+</div>
+
+<div class="box6">
+    <span>background-origin灵活定位</span>
+</div>
+</body>
+</html>

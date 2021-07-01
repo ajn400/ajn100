@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css编码技巧</title>
+    <style>
+        body{
+            font-size: 16px;
+        }
+
+        @media screen and (min-width:1200px) {
+            body{
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (min-width:1024px) and (max-width:1199px) {
+            body{
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (min-width:768px) and (max-width:1023px) {
+            body{
+                font-size: 12px;
+            }
+        }
+
+        @media screen and (min-width:414px) and (max-width:767px) {
+            body{
+                font-size: 10px;
+            }
+        }
+
+        @media screen and (max-width:413px) {
+            body{
+                font-size: 8px;
+            }
+        }
+
+        button{
+            padding: 6px 16px;
+            border: 1px solid #446d28;
+            background: #58a linear-gradient(#77a0bb,#58a);
+            border-radius: 4px;
+            box-shadow: 0px 1px 5px grey;
+            color: #fff;
+            text-shadow: 0 -1px 1px #335166;
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        .tip-up-v1{
+            font-size: 20px;
+            line-height: 1.5;
+        }
+
+        .tip-up-v2{
+            font-size: 125%;
+            line-height: 1.5;
+        }
+
+        .tip-up-v3{
+            padding: .3em .8em;
+            border-radius: .2em;
+            box-shadow: 0 .05em .25em #335166;
+            font-size: 125%;
+            line-height: 1.5 ;
+        }
+
+        .tip-up-v4{
+            border: 1px solid rgba(0,0,0,.1);
+            background: #58a linear-gradient(hsla(0,0%,100%,.2),transparent);
+            /*hsla() 函数使用色相、饱和度、亮度、透明度来定义颜色。*/
+            color: white;
+            padding: .3em .8em;
+            border-radius: .2em;
+            box-shadow: 0 .05em .25em #335166;
+            font-size: 125%;
+            line-height: 1.5 ;
+        }
+        .dry p{
+            color: currentColor;
+        }
+        .callout{
+            position: relative;
+        }
+        .callout::before{
+            content: "<";
+            position: absolute;
+            top: -.4em;
+            left: 1em;
+            padding: .35em;
+            background: inherit;
+            border: inherit;
+            border-right: 0;
+            border-bottom: 0;
+            transform: rotate(45deg);
+
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="dry">
+    <h1>减少代码重复</h1>
+    <button class="tip">yes</button>
+    <button class="tip-up-v1">yes</button>
+    <button class="tip-up-v2">yes</button>
+    <button class="tip-up-v3">yes</button>
+    <button class="tip-up-v4">yes</button>
+    <p>CSS里你可以在任何需要写颜色的地方使用currentColor这个变量，这个变量的值是当前元素的color值。如果当前元素没有在CSS里显示地指定一个color值，那它的颜色值就遵从CSS规则，从父级元素继承而来。</p>
+    <input type="text" placeholder="you raise me up" class="callout">
+</div>
+<div class="rwd">
+    <h1>媒体查询建设性意见</h1>
+    <ol>
+        <li>
+            使用百分比取代固定长度
+        </li>
+        <li>
+            想要再较大的分辨率使用固定的宽度时，使用max-width而非width,他可以适应较小的分辨率
+        </li>
+        <li>
+            背景图片完整地铺满整个容器:background-size:cover;
+        </li>
+        <li>
+            多列布局时使用column-width而非column-count,他可以让你再较小的分辨率变成单列布局
+        </li>
+        <li>
+            <strong>如果你发现自己需要一大堆媒体查询才能让设计适应大大小小的屏幕，
+                那么不妨后退一步，重新审视你的代码结构。因为在所有的情况下，响应式
+                都不是唯一需要考虑的问题。</strong>
+        </li>
+    </ol>
+</div>
+<script>
+    console.log(window.innerWidth)
+</script>
+</body>
+</html>

@@ -5,6 +5,43 @@
     <title>form事件屬性</title>
 </head>
 <body>
+<input type="search">
+<script>
+    let EventUtil = {
+        addHandler: function (element, type, handler) {
+            if (element.addEventListener) {
+                element.addEventListener(type, handler, false);
+            } else if (element.attachEvent) {
+                element.attachEvent("on" + type, handler);
+            } else {
+                element["on" + type] = handler;
+            }
+        }
+    }
+
+    let ipt=document.querySelector('input');
+    console.log(ipt)
+    // EventUtil.addHandler(ipt,'onfocus',function () {
+    //     console.log('onfocus')
+    // })
+    // ipt.onfocus=function(){
+    //     console.log('onfocus again')
+    // }
+    ipt.addEventListener('focus',function () {
+        console.log('onfocus again again!')
+    },false)
+    EventUtil.addHandler(ipt,'blur',function () {
+        console.log('blur')
+    })
+    EventUtil.addHandler(ipt,'change',function () {
+        console.log('onchange')
+    })
+    EventUtil.addHandler(ipt,'select',function () {
+        console.log('onselect')
+    })
     
+
+
+</script>
 </body>
 </html>

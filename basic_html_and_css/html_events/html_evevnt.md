@@ -1,0 +1,2 @@
+- 注意html事件属性名称带有on，例如onblur,onfocus,onselect，而js事件名称则是blur,focus或者select等等
+- https://www.w3school.com.cn/tags/html_ref_eventattributes.asp

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标事件</title>
+</head>
+<body>
+    <button type="submit" id="ipt">未被双击</button>
+    <center>其他事件包括：onclick,onmousedown(https://www.w3school.com.cn/tags/event_onmousedown.asp),onmouseup等等</center>
+</body>
+<script>
+    let btn=document.querySelector('#ipt')
+    let num=0;
+    btn.addEventListener('dblclick',function () {
+        num++;
+        btn.innerHTML='被双击'+num+'次';
+    })
+</script>
+</html>

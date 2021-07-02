@@ -4,10 +4,40 @@
     <meta charset="UTF-8">
     <title>css文本</title>
     <link rel="stylesheet" href="./tailwind.css">
+
+    <style>
+        .font-demo-1 {
+            hyphens: auto;
+            width: 85px;
+            margin: 0 auto;
+        }
+
+        .font-demo-2 {
+            font-size: 20px;
+            margin: 0 auto;
+            width: 400px;
+            text-align: center;
+        }
+
+        .font-demo-2 dt {
+            font-width: bold;
+            display: inline;
+        }
+
+        .font-demo-2 dd {
+            display: inline;
+            margin: 0;
+        }
+
+        .font-demo-2 dd::after {
+            content: "\A";
+            white-space: pre;
+        }
+    </style>
 </head>
 <body>
-<a href="https://www.purgecss.cn/">purgecss</a>
-<a href="https://www.tailwindcss.cn/docs/utility-first">taiwind css</a>
+<a href="">purgecss</a>
+<a href="">taiwind css</a>
 <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
     <div class="flex-shrink-0">
         <img class="h-12 w-12" src="1.svg" alt="logo">
@@ -18,6 +48,24 @@
     </div>
 </div>
 
+<div class="font-demo-1">
+    The only to get rid of a temptation is to yield to it.
+</div>
+
+
+<dl class="font-demo-2">
+    <dt>标题：</dt>
+    <dd>内容</dd>
+
+    <dt>姓名：</dt>
+    <dd>宁辉岳</dd>
+
+    <dt>年龄：</dt>
+    <dd>23</dd>
+
+    <dt>性别：</dt>
+    <dd>男</dd>
+</dl>
 
 </body>
 </html>

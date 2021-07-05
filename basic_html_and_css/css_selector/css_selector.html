@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css选择器实例</title>
+    <style>
+        ul{
+
+        }
+
+        ul li+li{
+            background: #888;
+        }
+
+        ul li:nth-child(3){
+            background: #5588aa;
+        }
+
+        ul li:nth-of-type(3){
+            margin-top: 20px;
+            background: #1e3a8a;
+            color: #ffffee;
+        }
+
+
+
+        ul code{
+            white-space:pre;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <code>
+            box-shadow: 0 5px 4px -4px black;
+        </code>
+
+        <li>box-shadow 鲜为人知的第四个长度参数。它排在
+            模糊半径参数之后，称作扩张半径。这个参数会根据你指定的值去扩大或
+            （当指定负值时）缩小投影的尺寸。</li>
+
+        <li>代码片段</li>
+        <li>
+            例如
+        </li>
+
+    </ul>
+</body>
+</html>

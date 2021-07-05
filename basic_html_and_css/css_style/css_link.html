@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css链接</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        a{
+            font-size: 20px;
+            line-height: 1em;
+        }
+        
+        a:nth-of-type(2){
+            text-decoration: none;
+        }
+
+        a:nth-of-type(2):visited,a:nth-of-type(2):link{
+            text-decoration: none;
+        }
+
+        a:nth-of-type(2):hover,a:nth-of-type(2):active{
+            text-decoration: underline;
+        }
+
+
+        a:nth-of-type(3)[href]{
+            background: linear-gradient(gray, gray) no-repeat;
+            background-size: 100% 1px;
+            background-position: 0 1.2em;
+            text-shadow: .05em 0 white, -.05em 0 white;
+            text-decoration: none;
+            line-height: unset;
+        }
+
+    </style>
+</head>
+<body>
+<a href="https://www.runoob.com/css/css-link.html">链接默认样式</a>
+
+<a href="https://www.runoob.com/css/css-link.html">文本修饰</a>
+
+<a href="https://www.runoob.com/css/css-link.html">优美的下划线</a>
+
+<div class="tip">
+    L(link)OV(visited)E  and  H(hover)A(active)TE
+</div>
+</body>
+</html>

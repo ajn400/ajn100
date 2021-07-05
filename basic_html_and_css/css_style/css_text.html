@@ -33,6 +33,33 @@
             content: "\A";
             white-space: pre;
         }
+
+        .font-demo-3{
+            font-size: 10px;
+            width: 500px;
+            padding: .5em;
+            line-height: 1.5em;
+            background: beige linear-gradient(rgba(0, 0, 0, .2) 50%, transparent 0);
+            background-size:auto 3em;
+            background-position: 0 .5em;
+        }
+
+        .font-demo-4 code{
+            white-space:pre;
+            margin:1em 0;
+            display: block;
+        }
+
+        .font-demo-5 code{
+            tab-size:2;
+            white-space:pre;
+        }
+
+        .font-demo-6{
+            font-family: Baskerville, "Goudy Old Style",
+            Garamond, Palatino, serif;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -48,11 +75,13 @@
     </div>
 </div>
 
+<h1>使用hyphens:auto使得换行变得美观</h1>
 <div class="font-demo-1">
     The only to get rid of a temptation is to yield to it.
 </div>
 
 
+<h1>使用css实现br</h1>
 <dl class="font-demo-2">
     <dt>标题：</dt>
     <dd>内容</dd>
@@ -67,5 +96,33 @@
     <dd>男</dd>
 </dl>
 
+
+<h1>文本行的斑马条纹</h1>
+
+<div class="font-demo-3">这里是一座年轻的城市，也曾是一个沉睡的摇篮这里是一座年轻的城市，也曾是一个沉睡的摇篮这里是一座年轻的城市，也曾是一个沉睡的摇篮这里是一座年轻的城市，也曾是一个沉睡的摇篮这里是一座年轻的城市，也曾是一个沉睡的摇篮这里是一座年轻的城市，也曾是一个沉睡的摇篮这里是一座年轻的城市，也曾是一个沉睡的摇篮这里是一座年轻的城市，也曾是一个沉睡的摇篮这里是一座年轻的城市，也曾是一个沉睡的摇篮这里是一座年轻的城市，也曾是一个沉睡的摇篮</div>
+
+<h1>调整tab的宽度</h1>
+<div class="font-demo-4 items-center">
+    <code>
+        let text="hello world"
+        console.log(text)
+    </code>
+</div>
+
+<div class="font-demo-5 items-center">
+    <code>
+        let text="hello world"
+        console.log(text)
+        let text="hello world"
+        console.log(text)
+        let text="hello world"
+        console.log(text)
+    </code>
+</div>
+
+<h1>华丽的&字符</h1>
+<div class="font-demo-6">
+    &amp;
+</div>
 </body>
 </html>

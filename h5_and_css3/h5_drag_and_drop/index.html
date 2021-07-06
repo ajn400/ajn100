@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>h5拖拽</title>
+    <style>
+        .draggable,.dropzone{
+            width: 100px;
+            height: 100px;
+            background: #123456 ;
+            margin: 20px;
+            color:white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="draggable" draggable="true">drag</div>
+
+    <div class="dropzone">
+        drop
+    </div>
+</body>
+<script>
+    window.addEventListener('dragover',function (events) {
+        events.preventDefault()
+    })
+
+    window.addEventListener('dragenter',function (events) {
+        if(events.target.className=='dropzone')
+        events.target.style.background='#999999'
+    },false)
+
+    window.addEventListener('dragleave',function (events) {
+        if(events.target.className=='dropzone')
+            events.target.style.background=''
+    },false)
+
+</script>
+</html>

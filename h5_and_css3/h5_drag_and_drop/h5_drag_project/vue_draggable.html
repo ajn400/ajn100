@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vuedraggable basedon sortable</title>
+    <style>
+
+        .drag-item {
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            position: relative;
+            background: #ddd;
+            margin: 20px auto auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.5.2/vue.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sortablejs@1.8.4/Sortable.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/Vue.Draggable/2.20.0/vuedraggable.umd.min.js"></script>
+</head>
+<body>
+<div id="root">
+
+    <draggable v-model="colors" @update="datadragEnd" :options="{animation:500}">
+        <transition-group>
+            <div v-for="element in colors" :key="element.text" class="drag-item">
+                {{element.text}}
+            </div>
+        </transition-group>
+    </draggable>
+</div>
+
+
+<script type="application/javascript">
+    let vm = new Vue({
+        el: '#root',
+        data() {
+            return {
+                colors: [
+                    {
+                        text: "Aquamarine",
+                    },
+                    {
+                        text: "Hotpink",
+                    },
+                    {
+                        text: "Gold",
+                    },
+                    {
+                        text: "Crimson",
+                    },
+                    {
+                        text: "Blueviolet",
+                    },
+                    {
+                        text: "Lightblue",
+                    },
+                    {
+                        text: "Cornflowerblue",
+                    },
+                    {
+                        text: "Skyblue",
+                    },
+                    {
+                        text: "Burlywood",
+                    }
+                ],
+                startArr: [],
+                endArr: [],
+                count: 0,
+            }
+        },
+
+        methods: {
+            datadragEnd(evt) {
+                evt.preventDefault();
+            }
+        },
+        mounted() {
+            //为了防止火狐浏览器拖拽的时候以新标签打开，此代码真实有效
+            document.body.ondrop = function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+        }
+    })
+
+</script>
+
+</body>
+</html>

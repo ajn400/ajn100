@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用插件</title>
+    <script src="https://cdn.bootcss.com/typed.js/2.0.5/typed.js"></script>
+
+
+    <style>
+        .typed-cursor{
+            opacity: 1;
+            -webkit-animation: blink 0.7s infinite;
+            -moz-animation: blink 0.7s infinite;
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-webkit-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-moz-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+
+        .box{
+            margin: 30px auto 0;
+        }
+
+        .box span.element{
+            padding: 10px 0 10px 200px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <span class="element element1"></span>
+    <br>
+</div>
+
+<div class="box">
+    <span class="element element2"></span>
+    <br>
+</div>
+
+<div class="box">
+    <span class="element element3"></span>
+    <br>
+</div>
+
+<div class="box">
+    <span class="element element4"></span>
+    <br>
+</div>
+
+
+
+<script>
+    let typed1 = new Typed('.element1', {
+        strings: ["纠正一个错误的方法有很多", "而解决一个错误的终极方法，就是不给它发生的机会。","今天的风格外的温柔","而我在风中零乱"],
+        typeSpeed: 100, //打字速度
+        backSpeed: 50 //回退速度
+    });
+
+    let typed2 = new Typed('.element2', {
+        strings: ["纠正一个错误的方法有很多", "而解决一个错误的终极方法，就是不给它发生的机会。","今天的风格外的温柔","而我在风中零乱"],
+        typeSpeed: 100, //打字速度
+        backSpeed: 50 //回退速度
+    });
+
+    let typed3 = new Typed('.element3', {
+        strings: ["纠正一个错误的方法有很多", "而解决一个错误的终极方法，就是不给它发生的机会。","今天的风格外的温柔","而我在风中零乱"],
+        typeSpeed: 100, //打字速度
+        backSpeed: 50 //回退速度
+    });
+
+    let typed4 = new Typed('.element4', {
+        strings: ["纠正一个错误的方法有很多", "而解决一个错误的终极方法，就是不给它发生的机会。","今天的风格外的温柔","而我在风中零乱"],
+        typeSpeed: 100, //打字速度
+        backSpeed: 50 //回退速度
+    });
+</script>
+</body>
+</html>

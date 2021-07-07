@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css打字动画</title>
+
+    <style>
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+        }
+
+        @keyframes caret {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        h1.demo1 {
+            width: 8em;
+            animation: typing 8s;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        h1.demo2 {
+            width: 15ch;
+            animation: typing 6s steps(15);
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        h1.demo3 {
+            border-right: .05em solid;
+            width: 15ch;
+            animation: typing 6s steps(15),
+            caret 1s steps(1) infinite;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<h1 class="demo1">css is awesome!</h1>
+
+<h1 class="demo2">css is awesome!</h1>
+
+<h1 class="demo3">css is awesome! i am awesome,too!</h1>
+
+<h1 class="demo3">
+    试一试中文字体的打字动画，如果可以，我把键盘吃掉</h1>
+
+
+<h1 class="demo3">
+    测试字体较多的情况
+    试一试中文字体的打字动画，如果可以，我把键盘吃掉
+    试一试中文字体的打字动画，如果可以，我把键盘吃掉
+    试一试中文字体的打字动画，如果可以，我把键盘吃掉</h1>
+
+
+<h1 class="demo3">
+    测试换行
+    <br>
+    试一试中文字体的打字动画，如果可以，我把键盘吃掉
+    <br>
+    试一试中文字体的打字动画，如果可以，我把键盘吃掉
+    <br>
+    试一试中文字体的打字动画，如果可以，我把键盘吃掉</h1>
+<script src="../../common_source/jquery-3.6.0.min.js"></script>
+<script>
+    $(function () {
+        $('h1').each(function () {
+            let text = this.innerText;
+            let length = text.length;
+            this.style.width = length + 'ch';
+
+            this.animationTimingFunction = "steps(" + length + "),steps(1)";
+        })
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>border-color</title>
+    <style>
+        div{
+            border: 6px solid;
+            margin: 10px;
+        }
+        div:first-child{
+            border-color: red green blue orange;
+        }
+
+        div:nth-child(2){
+            border-top-colors:red green blue orange ;
+            -webkit-border-top-colors:red green blue orange ;
+            -moz-border-top-colors:red green blue orange ;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        border-color
+    </div>
+
+    <div>
+        border-top-color.此功能是非标准的，不能在面向web的生产站点上使用它
+    </div>
+
+</body>
+</html>

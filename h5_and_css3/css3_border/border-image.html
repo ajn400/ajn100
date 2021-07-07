@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>border-image</title>
+    <style>
+        .box {
+            border: 10px solid transparent;
+            border-image: url("./message.svg") 64 64 64 64 round repeat;
+            width: 5vw;
+        }
+
+        .boxx {
+            border-image-slice: 50% 50%;
+            width: 10ch;
+        }
+    </style>
+</head>
+<body>
+<img src="https://www.runoob.com/wp-content/uploads/2013/08/241f95cad1c8a786fa8afe6f6109c93d70cf502a.gif" alt=""
+     style="width:20vw">
+<div class="box">
+    message
+</div>
+
+<div class="box boxx">
+    no message
+</div>
+</body>
+</html>

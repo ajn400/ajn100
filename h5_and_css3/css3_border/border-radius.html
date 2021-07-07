@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>border-radius</title>
+    <style>
+        div{
+            width: 20vw;
+            height: 20vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+            background: black;
+            color: white;
+        }
+        .box1{
+            border-radius: 10vw 20vw;
+        }
+
+        .box2{
+            border-radius: 10vw 20vw 30vw;
+        }
+        .box3{
+            border-radius: 10vw 20vw 30vw 40vw;
+        }
+
+        .box4{
+            border-radius: 20px/40px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box1">1</div>
+<div class="box2">2</div>
+<div class="box3">3</div>
+<div class="box4">椭圆角</div>
+</body>
+</html>

@@ -7,7 +7,7 @@
 <script>
     import echarts from 'echarts'
     export default {
-        name: "SimpleLine",
+        name: "SmoothLine",
         props: {
             className: {
                 type: String,
@@ -46,8 +46,9 @@
                         type: 'value'
                     },
                     series: [{
-                        data: [150, 230, 224, 218, 135, 147, 260],
-                        type: 'line'
+                        data: [820, 932, 901, 934, 1290, 1330, 1320],
+                        type: 'line',
+                        smooth: true
                     }]
                 };
                 this.chart.setOption(option)

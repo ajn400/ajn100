@@ -14,6 +14,10 @@ const createRouter=()=> new Router(
                     {
                         path:'simple-line',
                         component:()=>import('../components/echarts/SimpleLine')
+                    },
+                    {
+                        path:'smooth-line',
+                        component:()=>import('../components/echarts/SmoothLine')
                     }
                 ]
             }

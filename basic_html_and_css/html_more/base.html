@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <base target="_blank">
+    <style>
+        /* Please ❤ this if you like it! */
+
+        .wrapper {
+            text-align: center;
+            padding: 0 15px;
+            background-color: #173446;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.4em;
+        }
+
+        a {
+            color: #999;
+            position: relative;
+        }
+
+        a:after {
+            background-color: #999;
+            bottom: 0;
+            content: "";
+            height: 1px;
+            left: 0;
+            position: absolute;
+            transform: scaleX(0);
+            transition: all .3s ease-in-out 0s;
+            visibility: hidden;
+            width: 100%;
+        }
+
+        a:hover:after {
+            transform: scaleX(1);
+            visibility: visible;
+        }
+
+    </style>
+</head>
+<body>
+<!-- This link will open in a new tab. -->
+<div class="wrapper">
+    页面所有标签都会在新页面打开,使用   &nbspbase target="_blank"
+    <a href="https://freecodetools.org/">
+        Free Code Tools
+    </a>
+    <p>
+        Read more: <br><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base">
+        MDN Documentation
+    </a>
+    </p>
+</div>
+</body>
+</html>

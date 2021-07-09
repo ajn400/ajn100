@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            padding: 50px 20px;
+        }
+
+        label {
+            display: block;
+        }
+
+        input[type=range] {
+            background: red;
+            width: 200px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<label for="volume">Volume: </label>
+<input type="range" id="volume" name="volume" min="0" max="20">
+
+<label for="result">Your choice: </label>
+<input type="number" id="result" name="result">
+
+<script>
+    const volume = document.getElementById('volume');
+    const result = document.getElementById('result');
+    result.value = volume.value;
+
+    volume.addEventListener('change', () => {
+        result.value = volume.value;
+    });
+
+</script>
+</body>
+</html>

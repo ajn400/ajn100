@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    {{generateDogs}}
+    <ul start="999">
+        <li v-for="dog in dogs">{{
+            dog}}
+        </li>
+    </ul>
+
+    <ul>
+        <li v-for="(color,name) in cats">
+            cat {{name}} is {{color}}
+        </li>
+    </ul>
+
+</div>
+<script src="../../../common_source/vue.js"></script>
+<script type="text/javascript">
+    var vm = new Vue({
+        el: '#app',
+        data() {
+            return {
+                dogs: [],
+                cats: {
+                    "matrol": "red",
+                    "tony": "green",
+                    "mimi": "pink",
+
+                }
+            }
+        },
+        computed: {
+            generateDogs() {
+                for (let i = 0; i < 100; i++) {
+                    this.dogs.push(parseInt(i * Math.random() * 1000))
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>

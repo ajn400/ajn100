@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span{
+            font-size: 20px ;
+        }
+        span span{
+            font-weight: bold;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <span>
+        打开页面过去 <br> <span>
+        {{time}}
+    </span> <br>秒    </span>
+</div>
+<script src="../../../common_source/vue.js"></script>
+<script type="text/javascript">
+    var vm = new Vue({
+        el: '#app',
+        data() {
+            return{
+                time:0
+            }
+        },
+        methods:{
+          timePlus(){
+              this.time+=0.1
+          }
+        },
+        computed: {
+        },
+        mounted(){
+            this.$nextTick(()=>{
+                let tar=this;
+                setInterval(function () {
+                     // console.log(tar)
+                    //this指向window
+                    tar.time+=0.1
+                },100)
+            })
+        },
+
+        watch:{
+            time:function () {
+
+            }
+        }
+    })
+</script>
+</body>
+</html>

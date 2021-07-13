@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>es6解构</title>
+</head>
+<body>
+<h1><a href="http://caibaojian.com/es6/destructuring.html">参考</a></h1>
+<h1><a href="https://blog.csdn.net/momDIY/article/details/91358302">generator-yield（es6）入门系列</a></h1>
+<script>
+    var func={
+        init:function () {
+            func.destructuringDemo()
+            func.defaultDestructuring()
+        },
+        //关于解构
+        destructuringDemo:function () {
+            var a = 1;
+            var b = 2;
+            var c = 3;
+            var [c, d, e] = [1, 2, 3]
+            console.log(c, d, e)
+            //    本质上，这种写法属于“模式匹配”，只要等号两边的模式相同，左边的变量就会被赋予对应的值。下面是一些使用嵌套数组进行解构的例子。
+            //如果解构不成功,变量的值就等于undefined
+            //不完全解构
+            var [f, g] = [1, 2, 3]
+            console.log(f, g)
+            //    对于Set结构的数据,也可以使用数组的解构赋值
+            let [x, y, z] = new Set(["a", "b", "c"])
+            console.log(x, y, z);
+        },
+        defaultDestructuring:function(){
+            //解构析构允许指认默认值
+            var [foo=trur]=[];
+            console.log(foo);
+
+
+            var [a,b=1]=['a'];
+            console.log(b);
+
+            var [x,y='b']=['a',undefined];
+            console.log(y);
+
+        }
+    }
+    func.init()
+
+
+
+</script>
+</body>
+</html>

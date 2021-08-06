@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background: #20273C;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+        .mouse-cursor-gradient-tracking {
+            position: relative;
+            background: #7983ff;
+            padding: 0.5rem 1rem;
+            font-size: 1.2rem;
+            border: none;
+            color: white;
+            cursor: pointer;
+            outline: none;
+            overflow: hidden;
+            margin-top: 1em;
+        }
+
+        .mouse-cursor-gradient-tracking span {
+            position: relative;
+        }
+
+        .mouse-cursor-gradient-tracking:before {
+            --size: 0;
+            content: '';
+            position: absolute;
+            left: var(--x);
+            top: var(--y);
+            width: var(--size);
+            height: var(--size);
+            background: radial-gradient(circle closest-side, pink, transparent);
+            transform: translate(-50%, -50%);
+            transition: width 0.2s ease, height 0.2s ease;
+        }
+
+        .mouse-cursor-gradient-tracking:hover:before {
+            --size: 200px;
+        }
+    </style>
+</head>
+<body>
+<button class="mouse-cursor-gradient-tracking pink">
+    <span>Hover me</span>
+</button>
+<script>
+    let btn = document.querySelector('.mouse-cursor-gradient-tracking');
+    btn.addEventListener('mousemove', e => {
+        let rect = e.target.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+        let y = e.clientY - rect.top;
+        btn.style.setProperty('--x', x + 'px');
+        btn.style.setProperty('--y', y + 'px');
+    });
+</script>
+</body>
+</html>

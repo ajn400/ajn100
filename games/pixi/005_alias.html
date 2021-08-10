@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello pixi</title>
+    <script src="../../common_source/pixi.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-width: none;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0;
+        }
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    let type = "WebGL"
+    if (!PIXI.utils.isWebGLSupported()) {
+        type = 'canvas'
+    }
+    PIXI.utils.sayHello(type)
+
+    let Application=PIXI.Application,
+        loader=PIXI.loader,
+        resources=loader.resources,
+        Sprite=PIXI.Sprite;
+
+    let app = new Application({
+        width: 256,
+        height: 256,
+        antialias: true,
+        //字体边界和几何图形更加圆滑
+        transparent: false,
+        //设置整个canvas标签的透明度
+        resolution: 1
+    })
+    document.body.appendChild(app.view)
+
+    loader.add("images/cat.jpg").load(setup)
+    function setup() {
+        let cat = new Sprite(resources["images/cat.jpg"].texture);
+        app.stage.addChild(cat)
+    }
+</script>
+</body>
+</html>

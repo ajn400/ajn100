@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello pixi</title>
+    <script src="../../common_source/pixi.min.js"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-width:none;
+        }
+
+        ::-webkit-scrollbar{
+            width: 0;
+        }
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    let type="WebGL"
+    if(!PIXI.utils.isWebGLSupported()){
+        type='canvas'
+    }
+    PIXI.utils.sayHello(type)
+
+    let app =new PIXI.Application({
+        width:256,
+        height:256,
+        antialias:true,
+        //字体边界和几何图形更加圆滑
+        transparent:false,
+        //设置整个canvas标签的透明度
+        resolution:1
+    })
+    document.body.appendChild(app.view)
+    //创建canvas后还能继续更改颜色
+    app.renderer.backgroundColor=0x061639
+
+    //为确定设置的宽高的格式正确,需设置autoSize位true
+    app.renderer.autoResize=true;
+    //等待2秒
+    setTimeout(()=>{
+        app.renderer.resize(512,512)
+    },2000)
+
+    setTimeout(()=>{
+        app.renderer.view.style.position='absolute';
+        app.renderer.view.style.display='block';
+        app.renderer.resize(window.innerWidth,window.innerHeight)
+        app.renderer.backgroundColor=0x665544
+    },5000)
+
+
+</script>
+</body>
+</html>

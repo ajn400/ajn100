@@ -18,6 +18,28 @@ const createRouter=()=> new Router(
                     {
                         path:'smooth-line',
                         component:()=>import('../components/echarts/SmoothLine')
+                    },
+                    {
+                        path:'fantastic',
+                        component:()=>import('../components/echarts/fantasticChart')
+                    },
+
+                    {
+                        path:'mindmap',
+                        component:()=>import('../components/echarts/mindmap')
+                    }
+                    ,
+                    {
+                        path:'demo1',
+                        component:()=>import('../components/demo/demo1')
+                    },
+                    {
+                        path:'demo2',
+                        component:()=>import('../components/demo/SvgDraw')
+                    },
+                    {
+                        path:'stickyMenu',
+                        component:()=>import('../components/demo/stickyMenu')
                     }
                 ]
             }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello pixi</title>
+    <script src="../../common_source/pixi.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-width: none;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0;
+        }
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    let type = "WebGL"
+    if (!PIXI.utils.isWebGLSupported()) {
+        type = 'canvas'
+    }
+    PIXI.utils.sayHello(type)
+
+    //alias
+    let Application=PIXI.Application,
+        container=PIXI.Container,
+        loader=PIXI.loader,
+        resources=loader.resources,
+        //Rectangle用于定义矩阵形状的通用对象
+        Rectangle=PIXI.Rectangle,
+        Sprite=PIXI.Sprite,
+        TextureCache=PIXI.utils.TextureCache;
+
+    let app = new Application({
+        width: 256,
+        height: 256,
+        antialias: true,
+        //字体边界和几何图形更加圆滑
+        transparent: false,
+        //设置整个canvas标签的透明度
+        resolution: 1
+    })
+    document.body.appendChild(app.view)
+
+    loader.add("images/xuebi.png").load(setup)
+    function setup() {
+        let texture= TextureCache["images/xuebi.png"]
+
+        //用rectangle裁切纹理创建精灵
+        let rectangle= new Rectangle(160,128,32,32)
+        texture.frame=rectangle
+        let rocket= new Sprite(texture)
+
+
+        rocket.x=32;
+        rocket.y=32;
+        app.stage.addChild(rocket)
+        app.renderer.render(app.stage)
+
+    }
+</script>
+</body>
+</html>

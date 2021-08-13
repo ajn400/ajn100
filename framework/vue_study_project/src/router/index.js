@@ -40,6 +40,10 @@ const createRouter=()=> new Router(
                     {
                         path:'stickyMenu',
                         component:()=>import('../components/demo/stickyMenu')
+                    },
+                    {
+                        path:'buttons',
+                        component:()=>import('../components/button/index')
                     }
                 ]
             }

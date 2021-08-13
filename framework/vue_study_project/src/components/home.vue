@@ -7,6 +7,8 @@
             <router-link to="mindmap" class="link">思维导图</router-link>
             <router-link to="demo1" class="link">旋转三色球</router-link>
             <router-link to="stickyMenu" class="link">粘性表头(花里胡哨)</router-link>
+            <router-link to="buttons" class="link">按钮们</router-link>
+
 
         </div>
         <router-view class="view"></router-view>

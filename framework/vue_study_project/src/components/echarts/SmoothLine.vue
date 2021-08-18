@@ -19,11 +19,11 @@
             },
             width: {
                 type: String,
-                default: '400px'
+                default: '80%'
             },
             height: {
                 type: String,
-                default: '400px'
+                default: '800px'
             }
         },
         mounted() {

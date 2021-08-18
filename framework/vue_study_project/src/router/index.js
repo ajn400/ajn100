@@ -44,6 +44,22 @@ const createRouter=()=> new Router(
                     {
                         path:'buttons',
                         component:()=>import('../components/button/index')
+                    },
+                    {
+                        path:'pixiDemo',
+                        component:()=>import('../components/demo/pixiDemo')
+                    },
+                    {
+                        path:'pixiexample1',
+                        component:()=>import('../components/pixi/pixiDemo')
+                    },
+                    {
+                        path:'pixiexample2',
+                        component:()=>import('../components/pixi/pixidemo2')
+                    },
+                    {
+                        path:'pixiexample3',
+                        component:()=>import('../components/pixi/pixiDemo3')
                     }
                 ]
             }

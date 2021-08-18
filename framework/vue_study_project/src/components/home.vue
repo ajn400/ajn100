@@ -8,6 +8,11 @@
             <router-link to="demo1" class="link">旋转三色球</router-link>
             <router-link to="stickyMenu" class="link">粘性表头(花里胡哨)</router-link>
             <router-link to="buttons" class="link">按钮们</router-link>
+            <router-link to="pixiDemo" class="link">pixi示例</router-link>
+            <router-link to="pixiexample1" class="link">旋转的蜜蜂</router-link>
+            <router-link to="pixiexample2" class="link">一只旋转的蜜蜂</router-link>
+            <router-link to="pixiexample3" class="link">一群的蜜蜂</router-link>
+
 
 
         </div>

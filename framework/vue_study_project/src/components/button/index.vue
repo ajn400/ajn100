@@ -6,17 +6,22 @@
         <li class="content-item">
             <newpagebutton></newpagebutton>
         </li>
+        <li class="content-item">
+            <gobutton></gobutton>
+        </li>
     </ol>
 </template>
 
 <script>
     import uploadingbutton from  "./UpLoadingButton"
     import newpagebutton from "./NewPageButton"
+    import gobutton from "./GoButton"
     export default {
         name: "buttons",
         components: {
             uploadingbutton:uploadingbutton,
-            newpagebutton:newpagebutton
+            newpagebutton:newpagebutton,
+            gobutton:gobutton,
         }
     }
 </script>

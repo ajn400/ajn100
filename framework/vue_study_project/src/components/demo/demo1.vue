@@ -1,5 +1,15 @@
 <template>
-    <div>
+    <div class="demo1">
+        <div class="container">
+            <div class="dot dot-1"></div>
+            <div class="dot dot-2"></div>
+            <div class="dot dot-3"></div>
+        </div>
+        <div class="container">
+            <div class="dot dot-1"></div>
+            <div class="dot dot-2"></div>
+            <div class="dot dot-3"></div>
+        </div>
         <div class="container">
             <div class="dot dot-1"></div>
             <div class="dot dot-2"></div>
@@ -25,14 +35,19 @@
 </script>
 
 <style scoped>
+    .demo1{
+        display: flex;
+        margin-left: 100px;
+        margin-top: 20px;
+    }
     .container {
         width: 200px;
         height: 200px;
-        position: relative;
-        top: 500px;
-        left: -500px;
+        /*position: relative;*/
+        /*top: 500px;*/
+        /*left: -500px;*/
         transform: translate(-50%, -50%);
-        margin: auto;
+        margin: 100px;
         filter: url('#goo');
         animation: rotate-move 2s ease-in-out infinite;
     }

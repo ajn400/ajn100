@@ -1,0 +1,55 @@
+.demo1 {
+  display: flex;
+  height: 200px;
+}
+.demo1 .column1 {
+  height: 100%;
+  background: #a5dee4;
+  flex: 0 0 200px;
+}
+.demo1 .column2 {
+  background: #646a58;
+  flex: 1;
+}
+.demo2 {
+  height: 200px;
+}
+.demo2 .column1 {
+  float: left;
+  width: 200px;
+  background: #4a593d;
+  height: inherit;
+}
+.demo2 .column2 {
+  background: #78c2c4;
+  height: inherit;
+}
+.demo3 {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 200px;
+}
+.demo3 .column1 {
+  background: #a5dee4;
+}
+.demo3 .column2 {
+  background: #405b55;
+}
+.demo4 {
+  height: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  letter-spacing: -8px;
+}
+.demo4 .column1 {
+  width: 200px;
+  height: inherit;
+  background: #4a593d;
+  display: inline-block;
+}
+.demo4 .column2 {
+  height: inherit;
+  display: inline-block;
+  width: calc(100% - 200px);
+  background: #a5dee4;
+}

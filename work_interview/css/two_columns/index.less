@@ -1,0 +1,68 @@
+@color1:#A5DEE4;
+@color2:#78C2C4;
+@color3:#405B55;
+@color4:#4A593D;
+@color5:#646A58;
+
+.demo1{
+  display: flex;
+  height: 200px;
+  .column1{
+    height: 100%;
+    background: @color1;
+    flex: 0 0 200px;
+  }
+  .column2{
+    background: @color5 ;
+    flex: 1;
+  }
+}
+
+.demo2{
+  height: 200px;
+  .column1{
+    float: left;
+    width: 200px;
+    background: @color4;
+    height: inherit;
+  }
+
+  .column2{
+    background: @color2;
+    height: inherit;
+  }
+}
+
+.demo3{
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  //fr单位
+  grid-template-rows: 200px;
+  .column1{
+    background: @color1;
+  }
+  .column2{
+    background: @color3;
+  }
+}
+
+.demo4{
+  height: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  //解决display: inline-block导致的间隔
+  letter-spacing: -8px;
+  .column1{
+    width: 200px;
+    height: inherit;
+    background: @color4;
+    display: inline-block;
+  }
+  .column2{
+    height: inherit;
+    display: inline-block;
+    width: calc(~'100% - 200px');
+    background: @color1;
+  }
+}
+

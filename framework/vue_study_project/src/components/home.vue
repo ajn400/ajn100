@@ -12,9 +12,6 @@
             <router-link to="pixiexample1" class="link">旋转的蜜蜂</router-link>
             <router-link to="pixiexample2" class="link">一只旋转的蜜蜂</router-link>
             <router-link to="pixiexample3" class="link">一群的蜜蜂</router-link>
-
-
-
         </div>
         <router-view class="view"></router-view>
     </div>

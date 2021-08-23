@@ -88,7 +88,7 @@
                 <li class="darkerli">
                     <a href="http://startific.com">
                         <i class="fa fa-align-left fa-lg"></i>
-                        <span class="nav-text">Magazines
+                        <span class="nav-text">
                         </span>
                     </a>
                 </li>
@@ -96,14 +96,14 @@
                 <li class="darkerli">
                     <a href="http://startific.com">
                         <i class="fa fa-gamepad fa-lg"></i>
-                        <span class="nav-text">Games</span>
+                        <span class="nav-text"></span>
                     </a>
                 </li>
 
                 <li class="darkerli">
                     <a href="http://startific.com">
                         <i class="fa fa-glass fa-lg"></i>
-                        <span class="nav-text">Life & Style
+                        <span class="nav-text">
                         </span>
                     </a>
                 </li>
@@ -111,7 +111,7 @@
                 <li class="darkerlishadowdown">
                     <a href="http://startific.com">
                         <i class="fa fa-rocket fa-lg"></i>
-                        <span class="nav-text">Fun</span>
+                        <span class="nav-text"></span>
                     </a>
                 </li>
 
@@ -121,7 +121,7 @@
 
                 <a href="http://startific.com">
                     <i class="fa fa-question-circle fa-lg"></i>
-                    <span class="nav-text">Help</span>
+                    <span class="nav-text"></span>
                 </a>
             </li>
             <ul class="logout">

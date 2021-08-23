@@ -1,7 +1,9 @@
 <template>
     <div class="home">
+
         <main-layout ref="menu"></main-layout>
-        <router-view class="view" ref="view"></router-view>
+        <router-view class="view" ref="view">
+        </router-view>
     </div>
 
 </template>
@@ -37,5 +39,7 @@
     .view{
         max-width: 1200px;
     }
+
+
 
 </style>

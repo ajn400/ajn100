@@ -23,11 +23,24 @@
             },
             height: {
                 type: String,
-                default: '800px'
+                default: '80%'
             }
         },
         mounted() {
-            this.initChart()
+
+                var that=this;
+                that.initChart()
+                window.onresize=() => {
+                    //不知道为啥不起作用
+                    that.initChart()
+                    this.$router.go(0)
+                }
+
+
+
+        },
+        destroyed() {
+            window.onresize=null;
         },
         data() {
             return {
@@ -36,21 +49,25 @@
         },
         methods: {
             initChart() {
-                this.chart = echarts.init(document.getElementById(this.id))
-                let option = {
-                    xAxis: {
-                        type: 'category',
-                        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-                    },
-                    yAxis: {
-                        type: 'value'
-                    },
-                    series: [{
-                        data: [150, 230, 224, 218, 135, 147, 260],
-                        type: 'line'
-                    }]
-                };
-                this.chart.setOption(option)
+                this.$nextTick(()=>{
+                    this.chart = echarts.init(document.getElementById(this.id))
+                    let option = {
+                        xAxis: {
+                            type: 'category',
+                            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+                        },
+                        yAxis: {
+                            type: 'value'
+                        },
+                        series: [{
+                            data: [150, 230, 224, 218, 135, 147, 260],
+                            type: 'line'
+                        }]
+                    };
+                    this.chart.setOption(option)
+                })
+
+
             }
         }
     }

@@ -60,6 +60,10 @@ const createRouter=()=> new Router(
                     {
                         path:'pixiexample3',
                         component:()=>import('../components/pixi/pixiDemo3')
+                    },
+                    {
+                        path: 'pixiexample4',
+                        component:()=>import('../components/pixi/pixiDemo4')
                     }
                 ]
             }

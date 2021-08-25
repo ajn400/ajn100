@@ -9,39 +9,39 @@
             <ul>
 
                 <li>
-                    <a href="http://startific.com">
+                    <a>
                         <i class="fa fa-home fa-lg"></i>
                         <router-link to="simple-line" class="nav-text link">基础折线图</router-link>
                     </a>
                 </li>
                 <li>
-                    <a href="http://startific.com">
+                    <a>
                         <i class="fa fa-user fa-lg"></i>
                         <router-link to="smooth-line" class="link nav-text">基础平滑折线图</router-link>
                     </a>
                 </li>
                 <li>
-                    <a href="http://startific.com">
+                    <a>
                         <i class="fa fa-envelope-o fa-lg"></i>
                         <router-link to="fantastic" class="link nav-text">多个平滑曲线图</router-link>
                     </a>
                 </li>
                 <li>
-                    <a href="http://startific.com">
+                    <a>
                         <i class="fa fa-heart-o fa-lg"></i>
                         <router-link to="mindmap" class="link share nav-text">思维导图</router-link>
                     </a>
                 </li>
 
                 <li class="darkerlishadow">
-                    <a href="http://startific.com">
+                    <a>
                         <i class="fa fa-clock-o fa-lg"></i>
                         <router-link to="demo1" class="link nav-text">旋转三色球</router-link>
                     </a>
                 </li>
 
                 <li class="darkerli">
-                    <a href="http://startific.com">
+                    <a>
                         <i class="fa fa-desktop fa-lg"></i>
                         <router-link to="stickyMenu" class="link nav-text">粘性表头(花里胡哨)</router-link>
 
@@ -49,21 +49,21 @@
                 </li>
 
                 <li class="darkerli">
-                    <a href="http://startific.com">
+                    <a>
                         <i class="fa fa-plane fa-lg"></i>
                         <router-link to="buttons" class="link nav-text">按钮们</router-link>
                     </a>
                 </li>
 
                 <li class="darkerli">
-                    <a href="http://startific.com">
+                    <a>
                         <i class="fa fa-shopping-cart"></i>
                         <router-link to="pixiDemo" class="link nav-text">pixi示例</router-link>
                     </a>
                 </li>
 
                 <li class="darkerli">
-                    <a href="http://startific.com">
+                    <a>
                         <i class="fa fa-microphone fa-lg"></i>
                         <router-link to="pixiexample1" class="link nav-text">旋转的蜜蜂</router-link>
 
@@ -71,7 +71,7 @@
                 </li>
 
                 <li class="darkerli">
-                    <a href="http://startific.com">
+                    <a>
                         <i class="fa fa-flask fa-lg"></i>
                         <router-link to="pixiexample2" class="link nav-text">一只旋转的蜜蜂</router-link>
 
@@ -79,29 +79,28 @@
                 </li>
 
                 <li class="darkerli">
-                    <a href="http://startific.com">
+                    <a>
                         <i class="fa fa-picture-o fa-lg"></i>
                         <router-link to="pixiexample3" class="link nav-text">一群的蜜蜂</router-link>
                     </a>
                 </li>
 
                 <li class="darkerli">
-                    <a href="http://startific.com">
+                    <a>
                         <i class="fa fa-align-left fa-lg"></i>
-                        <span class="nav-text">
-                        </span>
+                        <router-link to="pixiexample4" class="link nav-text">新的Demo</router-link>
                     </a>
                 </li>
 
                 <li class="darkerli">
-                    <a href="http://startific.com">
+                    <a>
                         <i class="fa fa-gamepad fa-lg"></i>
                         <span class="nav-text"></span>
                     </a>
                 </li>
 
                 <li class="darkerli">
-                    <a href="http://startific.com">
+                    <a>
                         <i class="fa fa-glass fa-lg"></i>
                         <span class="nav-text">
                         </span>
@@ -109,7 +108,7 @@
                 </li>
 
                 <li class="darkerlishadowdown">
-                    <a href="http://startific.com">
+                    <a>
                         <i class="fa fa-rocket fa-lg"></i>
                         <span class="nav-text"></span>
                     </a>
@@ -119,17 +118,17 @@
             </ul>
             <li>
 
-                <a href="http://startific.com">
+                <a>
                     <i class="fa fa-question-circle fa-lg"></i>
                     <span class="nav-text"></span>
                 </a>
             </li>
             <ul class="logout">
                 <li>
-                    <a href="http://startific.com">
+                    <a>
                         <i class="fa fa-lightbulb-o fa-lg"></i>
                         <span class="nav-text">
-                            BLOG
+
                         </span>
 
                     </a>

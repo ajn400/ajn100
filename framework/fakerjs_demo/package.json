@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "generate": "node ./index.js > ./db.json",
     "server" : "json-server --watch ./db.json"
   },
-  "author": "",
+  "author": "ajn400",
   "license": "ISC",
   "dependencies": {
     "faker": "^5.5.3",

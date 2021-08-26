@@ -49,18 +49,22 @@
  * @param {ListNode} l2
  * @return {ListNode}
  */
+//本地调试不行的，仔细看题，以及上述提供的参数详情
 var mergeTwoLists = function(l1, l2) {
-    let res=l1.concat(l2);
-    for(let i=0;i<res.length-1;i++){
-        let min=res[i]
-        for(let j=i+1;j<res.length;j++){
-            if(res[j]<min){
-                [res[i],res[j]]=[res[j],res[i]];
-            }
-        }
+    if(l1 === null){
+        return l2;
     }
-    console.log(res)
+    if(l2 === null){
+        return l1;
+    }
+    if(l1.val < l2.val){
+        l1.next = mergeTwoLists(l1.next, l2);
+        return l1;
+    }else{
+        l2.next = mergeTwoLists(l1, l2.next);
+        return l2;
+    }
 };
 
-mergeTwoLists([1,8,3,8,99,88],[4,5,6])
+
 //leetcode submit region end(Prohibit modification and deletion)

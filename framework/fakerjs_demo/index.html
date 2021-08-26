@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/faker/dist/faker.min.js"></script>
+    <script type="text/javascript">
+        //faker的img用法
+        let database = {users: []};
+        const threshold = 100;
+
+        for (let i = 1; i <= threshold; i++) {
+            database.users.push({
+                id: i,
+                name: faker.name.firstName() + " " + faker.name.lastName(),
+                job: faker.name.jobTitle(),
+                about: faker.lorem.paragraph(),
+                phone: faker.phone.phoneNumber(),
+                userName: faker.internet.userName(),
+                email: faker.internet.email(),
+                salary: "$" + faker.finance.amount() + "M",
+                // You can also use faker.image.people() for image
+                image: faker.image.people(),
+                country: faker.address.country()
+            });
+            console.log(faker.image.people())
+        }
+        //http://placeimg.com/
+        let timer=setInterval(function () {
+            var img = document.createElement('img')
+
+            let x = Math.random() * 10;
+            let option=parseInt(x.toFixed());
+            switch (option) {
+                case 1:{
+                    img.src = faker.image?.abstract(option*60,option*120,1);
+                    break;
+                }
+
+                case 2:{
+                    img.src = faker.image.people(option*60,option*120,1);
+                    break;
+                }
+                case 3:
+                    img.src = faker.image.animals(option*60,option*120,1);
+                    break;
+                case 4:
+                    img.src = faker.image.business(option*60,option*120,1);
+                    break;
+                case 5:
+                    img.src = faker.image.cats(option*60,option*120,1);
+                    break;
+                case 6:
+                    img.src = faker.image.city(option*60,option*120,1);
+                    break;
+                case 7:
+                    img.src = faker.image.food(option*60,option*120,1);
+                    break;
+                case 8:
+                    img.src = faker.image.nightlife(option*60,option*120,1);
+                    break;
+                case 9:
+                    img.src = faker.image.fashion(option*60,option*120,1);
+                    break;
+            }
+
+            document.body.appendChild(img)
+        }, 10)
+
+        setTimeout(function () {
+            clearInterval(timer)
+        },1000)
+
+
+    </script>
+</head>
+<body>
+<img src="" alt="">
+</body>
+</html>

@@ -20,3 +20,12 @@ const str2='d,e,f';
 console.log(str1.concat(str2))
 ~~~
 
+> ### splice
+~~~js
+arr.splice(1,3);
+//删除第一项的位置，要删除的项数
+arr.splice(1,0,1,2)
+//添加项目时，第二个参数为0，第一个参数还是表示添加的位置，第三个参数往后便是将要添加的值
+~~~
+
+> ### indexOf和lastIndexOf

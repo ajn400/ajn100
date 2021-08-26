@@ -64,9 +64,6 @@
                     // start animating
                     app.start();
                 }
-
-
-
             },
         },
 

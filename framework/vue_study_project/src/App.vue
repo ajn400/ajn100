@@ -4,12 +4,15 @@
     </div>
 </template>
 
-<script>
+<script >
 
     export default {
         name: 'App'
     }
 </script>
 
-<style>
+<style >
+    body{
+        overflow: hidden;
+    }
 </style>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div id="app">
+    {{time}}
+</div>
+<script src="../../../common_source/vue.js"></script>
+<script type="text/javascript">
+    var vm = new Vue({
+        el: '#app',
+        render(createElement) {
+            return createElement('button',{
+                attrs:{
+                    type:'submit'
+                },
+                props:{
+                    text:this.buttonText
+                },
+                domProps:{
+                    innerHTML:'<span>123</span>'
+                },
+                on:{
+                    click:()=>{
+                        window.alert("点击点击")
+                    }
+                },
+                slot:'',
+                key:'',
+                ref:'',
+                class:['abc',{'abcd':true},{'abcdef':false}],
+                style:{width:'100px',height:'100px'}
+            })
+        },
+        mounted() {
+        },
+        data() {
+            return {
+                time: 0,
+                buttonText:'这是custom-button'
+            }
+        },
+    });
+
+
+</script>
+</body>
+</html>

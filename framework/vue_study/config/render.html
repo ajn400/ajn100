@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div id="app">
+    {{time}}
+</div>
+<script src="../../../common_source/vue.js"></script>
+<script type="text/javascript">
+    var vm = new Vue({
+        el: '#app',
+        render(createElement) {
+            console.log("render this", this)
+            return createElement('p', "Hello World")
+        },
+        mounted() {
+            console.log("mounted this", this)
+        },
+        data() {
+            return {
+                time: 0
+            }
+        },
+    });
+
+    //https://www.jianshu.com/p/7508d2a114d3
+    //模板通过编译生成ast,再由ast生成vue的render函数，渲染函数结合数据生成virtual dom tree,经过diff和patch生成ui
+    //Vue推荐使用模板来构建我们的应用界面，在底层实现中Vue会将模板编译成渲染函数，当然我们也可以不写模板，直接写渲染函数，以获得更好的控制
+//    Vue创建了一层Watcher层，在组件渲染的过程中把属性记录为依赖，之后当依赖项的setter被调用时，会通知Watcher重新计算，
+
+</script>
+</body>
+</html>

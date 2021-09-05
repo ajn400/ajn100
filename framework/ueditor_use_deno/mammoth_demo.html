@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="file" accept=".docx" onchange="handelFile(this.files)">
+<script src="./mammoth.browser.min.js"></script>
+
+<script type="application/javascript">
+    // var mammoth = require("mammoth.browser.min.js");
+    var result,true_result=0;
+    function handelFile(fileList,callback){
+
+
+        const file = fileList[0];
+        console.log('file',file)
+
+        const reader = new FileReader();
+        reader.onload = function() {
+            // const arrayBuffer = loadEvent.target["result"];
+            // callback(arrayBuffer);
+            console.log("hh",this.result)
+            true_result=this.result;
+            if(true_result){
+                console.log("成功");
+                mammoth.convertToHtml({ true_result }).then(function(){
+                    console.log(this)
+                })
+            }
+        };
+
+        //fucking undefined
+        var result=reader.readAsArrayBuffer(file)
+        console.log("haha",result)
+
+    }
+
+
+
+
+    // mammoth.convertToHtml({ arrayBuffer })
+</script>
+
+</body>
+</html>

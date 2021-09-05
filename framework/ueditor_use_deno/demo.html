@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一次使用ueditor</title>
+</head>
+<body style="height: 500px">
+<script id="container" name="content" type="text/plain" style="height: 500px">
+
+
+</script>
+
+
+<script src="./ueditor.config.js"></script>
+<script src="./ueditor.all.js"></script>
+
+<script>
+    // var ue = UE.getEditor('container');
+    // setTimeout(function () {
+    //     UE.instants.ueditorInstant0.setContent('<div>欢迎使用编辑器</div>')
+    // },3000)
+
+    // ue.ready(function () {
+    //     ue.setContent('<h1>i am strong</h1><pre>where are you?</pre>');
+    //     //    设置编辑器内容
+    //
+    //     let html = ue.getContent()
+    //
+    //     let text = ue.getContentTxt()
+    //
+    //     // console.log("html",html)
+    //     // console.log("text",text)
+    // })
+/*
+*
+* 执行ueditor文件之后产生三个全局对象：
+UEDITORUI - 所有工具按钮插件的api     ?  (UE.ui)
+UE - api入口
+UEDITOR_CONFIG - 配置数据
+*
+* */
+
+    var ue=UE.getEditor('container',{
+        toolbars: [
+            [ 'source', 'undo', 'redo', 'bold']
+        ],
+        autoHeightEnabled: true,
+        autoFloatEnabled: true
+    })
+
+
+</script>
+</body>
+</html>

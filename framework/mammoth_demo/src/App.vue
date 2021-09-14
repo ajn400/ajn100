@@ -9,7 +9,6 @@
 // import HelloWorld from './components/HelloWorld.vue'
 import mammoth from 'mammoth'
 
-var true_result=0;
 
 export default {
   name: 'App',
@@ -17,21 +16,25 @@ export default {
     // HelloWorld
   },
   mounted() {
-    // console.log(mammoth)
+    console.log(mammoth)
   },
   methods:{
     handelFile:function(){
+      let true_result=0;
+
       let fileList=this.$refs.fileinput?.files
       const file = fileList[0];
 
+      console.log(file)
       const reader = new FileReader();
       reader.onload = function() {
         true_result=this.result;
-        if(true_result){
-          mammoth.convertToHtml({ true_result }).then(function(){
-            console.log("成功",this)
-          })
-        }
+        // if(true_result){
+        //   mammoth.convertToHtml({ true_result }).then(function(){
+        //     console.log("成功",this)
+        //   })
+        // }
+        console.log("888",true_result)
       };
 
       //fucking undefined

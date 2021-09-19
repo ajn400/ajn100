@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p {
+            white-space: pre;
+        }
+
+        .custom {
+            tab-size: 3;
+            -moz-tab-size: 3;
+        }
+
+    </style>
+</head>
+<body>
+<p>无tab</p>
+<p>&#0009;default tab size of 8 characters wide</p>
+<p class="custom">&#0009;custom tab size of 3 characters wide</p>
+<p>&nbsp;&nbsp;&nbsp;3 spaces, equivalent to the custom tab size</p>
+<p style="text-indent: 10em;white-space: normal">3 spaces, equivalent to the custom tab size3 spaces, equivalent to the custom tab size3 spaces, equivalent to the custom tab size3 spaces, equivalent to the custom tab size3 spaces, equivalent to the custom tab size</p>
+</body>
+</html>

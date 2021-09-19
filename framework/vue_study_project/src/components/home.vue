@@ -1,6 +1,5 @@
 <template>
     <div class="home">
-
         <main-layout ref="menu"></main-layout>
         <router-view class="view" ref="view">
         </router-view>
@@ -17,12 +16,10 @@
         },
         mounted() {
             this.$nextTick(()=>{
-
-                console.log(this.$refs.view.$vnode.elm)
+                // console.log(this.$refs.view.$vnode.elm)
                 // this.$refs.view.$vnode.elm
-                console.log(this.$refs.menu.$vnode.elm)
+                // console.log(this.$refs.menu.$vnode.elm)
             })
-
         }
     }
 </script>

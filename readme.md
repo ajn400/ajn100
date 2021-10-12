@@ -9,3 +9,10 @@
 # 2021-08-20-
 
 vue_study_project       1.0.0 -> 1.0.1
+
+#### 如果Http提交不了
+
+```shell
+git push -f git@github.com:ajn400/ajn100.git master
+```
+

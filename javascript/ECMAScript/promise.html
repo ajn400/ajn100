@@ -193,25 +193,84 @@
 
       // 4.then
 
-      const p1 = new Promise((resolve, resize) => {
-        resolve("成功");
-      }).then(
-        (res) => console.log(res),
-        (error) => console.log(error)
-      );
+      // const p1 = new Promise((resolve, resize) => {
+      //   resolve("成功");
+      // }).then(
+      //   (res) => console.log(res),
+      //   (error) => console.log(error)
+      // );
 
-      const p2 = new Promise((resolve, reject) => {
-        setTimeout(() => {
-          reject("失败");
-        });
-      }).then(
-        (res) => console.log(res),
-        (error) => console.log(error)
-      );
+      // const p2 = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     reject("失败");
+      //   });
+      // }).then(
+      //   (res) => console.log(res),
+      //   (error) => console.log(error)
+      // );
 
-      // 链式调用
-      
+      // // 链式调用
+      // const p3 =  new Promise(
+      //   (resolve,reject)=>{
+      //     resolve(100);
+      //   }
+      // ).then(res=>2*res,err=>console.log(err))
+      // .then(res=>console.log(res),err=>console.log(err))
 
+      // then
+      class MyPromise {
+        constructor(executor){
+            this.initValue();
+            this.initBind();
+            try{
+              executor(this.resolve,this.reject)
+            } catch(e){
+              this.reject(e)
+            }
+        }
+
+        initValue(){
+          this.promiseState = "pending";
+          this.promiseResult = null;
+        }
+
+        initBind() {
+          this.resolve = this.resolve.bind(this);
+          this.reject = this.reject.bind(this);
+        }
+
+        resolve(val){
+          if(this.promiseState!=="pending") return;
+          this.promiseState= "fulfilled";
+          this.promiseResult = val;
+        }
+
+        reject(val){
+          if(this.promiseState!=="pending") return;
+
+          this.promiseState = "rejected";
+          this.promiseResult = val;
+        }
+
+        then(onFulfilled,onRejected){
+            onFulfilled = typeof onFulfilled==='function' ? onFulfilled:val=>val;
+            onRejected = typeof onRejected==='function' ? onRejected : reason=>{throw reason};
+
+            if(this.promiseState === 'fulfilled'){
+              // 如果当前为成功状态，执行第一个回调
+              onFulfilled(this.promiseState);
+              return "hh"
+            }else if(this.promiseState ==='rejected'){
+              onRejected(this.promiseResult)
+            }
+        }
+
+      }
+      const t5 = new MyPromise((resolve,reject)=>{
+        resolve("hh")
+      }).then((res)=>{console.log(res)},(err)=>{console.error(err);})
+
+      console.log(t5)
 
     </script>
   </body>

@@ -34,15 +34,14 @@
         if(snake.indexOf(n, 1) > 0 || n < 0 || n > 399 || direction == 1 && n % 20 == 0 || direction == -1 && n % 20 == 19) {
             return alert("GAME OVER!");
         }
-        draw(n, "lime");        //画出蛇头下次出现的位置
-        if(n == food) {         //如果吃到食物时，产生一个蛇身以外的随机的点，不会去掉蛇尾
+        draw(n, "lime");
+        if(n == food) {
             while (snake.indexOf(food = ~~(Math.random() * 400)) > 0);
             draw(food, "yellow");
-        } else {                //没有吃到食物时正常移动，蛇尾出队列
+        } else {
             draw(snake.pop(),"black");
         }
         setTimeout(arguments.callee, 150);
-        //每隔0.15秒执行函数一次，可以调节蛇的速度
     }();
 </script>
 </body>

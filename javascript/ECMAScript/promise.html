@@ -7,6 +7,7 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- 参考https://mp.weixin.qq.com/s?__biz=Mzg2NjY2NTcyNg==&mid=2247483800&idx=1&sn=102d4041d0615da8beb98324b18db830&scene=58&subscene=0&st=A70D4E01FB129604BA86247DDFB01C4E88AA81EB8BBBAB1494864B476437467DCA0C528C36FCEAF7488684A13E1E52CD06C4BB055A413649E38D21BFB54070A6BC6AA1CF2AF87CB9DB2CBC8A66B062DBD7D4301F9883F010F43DFECDCDC7DA5D2BD39F9A0E1EC9D1C0CA601D54AF37B43E4D6CD49D357F0A0C1B6902AF00A95D33AE5205E90CF7A775143C853D051F8950573476CE2496D2FF76E562D6E1FFF3F0C623112C997146F5ED8844811A97D4F952A2D63545805D85F4D2E542441294&vid=1688850528088407&cst=23C031C1C6984925F7D30B53C685B0DD67A9C113753BDEF498D4A95A27BA498C965D22EAB0174E93E27F5E9A9790F7FA&deviceid=fd346ebc-aa1f-48d0-b7d3-c0c286eb9ea3&version=3.1.18.6007&platform=win -->
     <script>
       //   var promise = new Promise(function (resolve, reject) {
       //     if (true) {
@@ -218,59 +219,121 @@
       // .then(res=>console.log(res),err=>console.log(err))
 
       // then
-      class MyPromise {
-        constructor(executor){
-            this.initValue();
-            this.initBind();
-            try{
-              executor(this.resolve,this.reject)
-            } catch(e){
-              this.reject(e)
-            }
-        }
+      // class MyPromise {
+      //   constructor(executor){
+      //       this.initValue();
+      //       this.initBind();
+      //       try{
+      //         executor(this.resolve,this.reject)
+      //       } catch(e){
+      //         this.reject(e)
+      //       }
+      //   }
 
-        initValue(){
-          this.promiseState = "pending";
-          this.promiseResult = null;
-        }
+      //   initValue(){
+      //     this.promiseState = "pending";
+      //     this.promiseResult = null;
+      //   }
 
-        initBind() {
-          this.resolve = this.resolve.bind(this);
-          this.reject = this.reject.bind(this);
-        }
+      //   initBind() {
+      //     this.resolve = this.resolve.bind(this);
+      //     this.reject = this.reject.bind(this);
+      //   }
 
-        resolve(val){
-          if(this.promiseState!=="pending") return;
-          this.promiseState= "fulfilled";
-          this.promiseResult = val;
-        }
+      //   resolve(val){
+      //     if(this.promiseState!=="pending") return;
+      //     this.promiseState= "fulfilled";
+      //     this.promiseResult = val;
+      //   }
 
-        reject(val){
-          if(this.promiseState!=="pending") return;
+      //   reject(val){
+      //     if(this.promiseState!=="pending") return;
 
-          this.promiseState = "rejected";
-          this.promiseResult = val;
-        }
+      //     this.promiseState = "rejected";
+      //     this.promiseResult = val;
+      //   }
 
-        then(onFulfilled,onRejected){
-            onFulfilled = typeof onFulfilled==='function' ? onFulfilled:val=>val;
-            onRejected = typeof onRejected==='function' ? onRejected : reason=>{throw reason};
+      //   then(onFulfilled,onRejected){
+      //       onFulfilled = typeof onFulfilled==='function' ? onFulfilled:val=>val;
+      //       onRejected = typeof onRejected==='function' ? onRejected : reason=>{throw reason};
 
-            if(this.promiseState === 'fulfilled'){
-              // 如果当前为成功状态，执行第一个回调
-              onFulfilled(this.promiseState);
-              return "hh"
-            }else if(this.promiseState ==='rejected'){
-              onRejected(this.promiseResult)
-            }
-        }
+      //       if(this.promiseState === 'fulfilled'){
+      //         // 如果当前为成功状态，执行第一个回调
+      //         onFulfilled(this.promiseState);
+      //         return "hh"
+      //       }else if(this.promiseState ==='rejected'){
+      //         onRejected(this.promiseResult)
+      //       }
+      //   }
 
-      }
-      const t5 = new MyPromise((resolve,reject)=>{
-        resolve("hh")
-      }).then((res)=>{console.log(res)},(err)=>{console.error(err);})
+      // }
+      // const t5 = new MyPromise((resolve,reject)=>{
+      //   resolve("hh")
+      // }).then((res)=>{console.log(res)},(err)=>{console.error(err);})
 
-      console.log(t5)
+      // console.log(t5)
+
+      // 定时器情况
+      // class MyPromise {
+      //   constructor(executor) {
+      //     this.initValue();
+      //     this.initBind();
+      //     try {
+      //       executor(this.resolve, this.reject);
+      //     } catch (e) {
+      //       this.reject(e);
+      //     }
+      //   }
+      //   initValue() {
+      //     this.promiseState = "pending";
+      //     this.promiseResault = null;
+      //   }
+
+      //   initBind() {
+      //     this.reject=this.reject.bind(this);
+      //     this.resolve = this.resolve.bind(this);
+      //   }
+
+      //   resolve(val) {
+      //     if (this.promiseState !== "pending") return;
+
+      //     this.promiseState = "fulfilled";
+      //     this.promiseResault = val;
+      //   }
+
+      //   reject(val) {
+      //     if (this.promiseState !== "pending") return;
+      //     this.promiseResault = val;
+      //     this.promiseState = "rejected";
+      //   }
+
+      //   then(onFulfilled, onRejected) {
+      //     onFulfilled =
+      //       typeof onFulfilled === "function" ? onFulfilled : (val) => val;
+      //     onRejected =
+      //       typeof onRejected === "function" ? onRejected : (val) => val;
+
+      //     if (this.promiseState === "fulfilled") {
+      //       onFulfilled(this.promiseState);
+      //     }else if(this.promiseState === 'rejected'){
+      //       onRejected(this.promiseResault)
+      //     }
+      //   }
+      // }
+
+      // const p5 = new MyPromise((resolve,reject)=>{
+      //   setTimeout(()=>{
+      //     reject('失败')
+      //   },1000)
+      //   // reject('失败')
+      // }).then(
+      //   res => console.log(res),
+      //   err=>console.log(err)
+      //   )
+
+      // 实现
+      
+
 
     </script>
   </body>

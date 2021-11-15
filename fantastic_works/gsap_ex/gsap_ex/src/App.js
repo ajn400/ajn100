@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import FadeInAnimation from "./FadeInAnimation";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <FadeInAnimation wrapperElement="h1" direction="down">
+        Hello CodeSandbox
+      </FadeInAnimation>
+      <FadeInAnimation wrapperElement="h2" direction="right" delay={1}>
+        Start editing to see some magic happen!
+      </FadeInAnimation>
+      <FadeInAnimation
+        style={{
+          width: 200,
+          color: "white",
+          height: 200,
+          backgroundColor: "purple",
+        }}
+        direction="up"
+      >
+
+        <p>Hello</p>
+      </FadeInAnimation> */}
+      <FadeInAnimation direction="left" style={{
+        fontWeight:"bold"
+      }} delay="1">
+        Hello darkness my old friend
+      </FadeInAnimation>
+      <FadeInAnimation direction="left" style={{
+        fontWeight:"bold"
+      }} delay="2">
+        Hello darkness my old friend
+      </FadeInAnimation>
+      <FadeInAnimation direction="left" style={{
+        fontWeight:"bold"
+      }} delay="3">
+        Hello darkness my old friend
+      </FadeInAnimation>
+      <FadeInAnimation direction="left" style={{
+        fontWeight:"bold"
+      }} delay="4">
+        Hello darkness my old friend
+      </FadeInAnimation>
     </div>
   );
 }
-
-export default App;

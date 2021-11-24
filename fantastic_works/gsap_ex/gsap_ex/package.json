@@ -38,5 +38,6 @@
   "devDependencies": {
     "gsap": "^3.8.0",
     "react-gsap": "^3.2.1"
-  }
+  },
+  "homepage": "https://ajn404.github.io/gsap_ex"
 }

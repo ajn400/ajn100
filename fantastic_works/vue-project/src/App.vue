@@ -12,6 +12,8 @@ import HelloWorld from '@/components/HelloWorld.vue'
       <div id="nav">
         <router-link to="/">Home</router-link>
         <router-link to="/about">About</router-link>
+        <br>
+        <router-link to="/vuexl">Vuex</router-link>
       </div>
     </div>
   </header>
@@ -71,7 +73,6 @@ a,
 #nav a {
   display: inline-block;
   padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
 }
 
 #nav a:first-of-type {

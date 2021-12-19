@@ -1,0 +1,27 @@
+.wrapper {
+    width: 300px;
+    height: 300px;
+    border: 1px dashed red;
+    margin: 50px auto 0;
+}
+
+.inner {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+
+}
+
+.rotate{
+    transform: rotate(80deg);
+    /* 度 */
+    /* 顺时针旋转 */
+    
+    transform: rotate(50grad);
+    /* grad */
+    /* 梯度 */
+
+    transform: rotate(1rad);
+    /* 弧度 */
+
+}

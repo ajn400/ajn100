@@ -1,0 +1,20 @@
+.wrapper {
+    width: 300px;
+    height: 300px;
+    border: 1px dashed red;
+    margin: 50px auto 0;
+}
+
+.inner {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+
+}
+
+.skew{
+    transform: skew(10deg);
+    /* transform: skewX(10deg); */
+    transform: skewY(10deg);
+    transform: skew(10deg,20deg);
+}

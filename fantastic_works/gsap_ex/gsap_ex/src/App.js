@@ -20,7 +20,6 @@ words.split(',').map((item, index) => {
 
 export default function App() {
   useEffect(()=>{
-
   });
 
   const jumpToApp = ()=>{

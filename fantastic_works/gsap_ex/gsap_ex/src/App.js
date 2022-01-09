@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React,{useEffect,useState,useContext,useReducer} from "react";
 import FadeInAnimation from "./FadeInAnimation";
 import {Routes} from 'react-router'
 import './App.css';
@@ -19,6 +19,7 @@ words.split(',').map((item, index) => {
 })
 
 export default function App() {
+
   useEffect(()=>{
   });
 

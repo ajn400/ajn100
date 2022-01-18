@@ -1,0 +1,12 @@
+.box{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.item{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}

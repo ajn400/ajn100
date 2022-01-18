@@ -1,0 +1,18 @@
+{
+  "name": "threedemo",
+  "version": "0.0.1",
+  "description": "three demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "threejs"
+  ],
+  "author": "ajn404",
+  "license": "ISC",
+  "devDependencies": {
+    "seajs": "^3.0.3",
+    "three": "^0.136.0"
+  }
+}

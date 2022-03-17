@@ -1,0 +1,71 @@
+body{
+background-image: url('https://picsum.photos/id/119/1980/1080');
+background-position: center;
+background-repeat: no-repeat;
+backdrop-filter: blur(1px);
+-webkit-backdrop-filter: blur(1px);
+min-height: 100vh;
+
+}
+
+.polaroid-gallery{
+    text-align: center;
+}
+
+
+.title{
+    font-size: 2em;
+    font-weight: 400;
+    color: #333;
+
+
+}
+
+.polaroid-card{
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 4px 4px 8px -4px  rgba(0, 0, 0, .8);
+}
+
+.polaroid-card:hover{
+    transform: scale(1.3) !important;   
+}
+
+
+
+
+.polaroid-card-caption{
+    text-align: center;
+    font-family: "Maker Felt",sans-serif;
+    font-size: 14px;
+    margin-top: 8px;
+    letter-spacing: 2px;
+
+}
+
+.polaroid-card:nth-of-type(even){
+    transform:rotate(-8deg)
+}
+.polaroid-card:nth-of-type(even)::before{
+    content: '';
+    display: block;
+    background-color:rgba(222, 220, 200, .66) ;
+    width: 80px;
+    height: 25px;
+    transform:rotate(-25deg) translate(-30px,-25px);
+}
+
+
+.polaroid-card:nth-of-type(odd){
+    transform:rotate(9deg)
+}
+
+.polaroid-card:nth-of-type(odd)::before{
+    content: '';
+    display: block;
+    background-color:rgba(222, 220, 200, .66) ;
+    width: 80px;
+    height: 25px;
+    transform:translate(140px,-18px) rotate(25deg) ;
+}

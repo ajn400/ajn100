@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 参考https://mp.weixin.qq.com/s?__biz=Mzg2NjY2NTcyNg==&mid=2247483800&idx=1&sn=102d4041d0615da8beb98324b18db830&scene=58&subscene=0&st=A70D4E01FB129604BA86247DDFB01C4E88AA81EB8BBBAB1494864B476437467DCA0C528C36FCEAF7488684A13E1E52CD06C4BB055A413649E38D21BFB54070A6BC6AA1CF2AF87CB9DB2CBC8A66B062DBD7D4301F9883F010F43DFECDCDC7DA5D2BD39F9A0E1EC9D1C0CA601D54AF37B43E4D6CD49D357F0A0C1B6902AF00A95D33AE5205E90CF7A775143C853D051F8950573476CE2496D2FF76E562D6E1FFF3F0C623112C997146F5ED8844811A97D4F952A2D63545805D85F4D2E542441294&vid=1688850528088407&cst=23C031C1C6984925F7D30B53C685B0DD67A9C113753BDEF498D4A95A27BA498C965D22EAB0174E93E27F5E9A9790F7FA&deviceid=fd346ebc-aa1f-48d0-b7d3-c0c286eb9ea3&version=3.1.18.6007&platform=win -->
+    <script>
+      //   var promise = new Promise(function (resolve, reject) {
+      //     if (true) {
+      //       resolve("666");
+      //     } else {
+      //       reject("lll");
+      //     }
+      //   });
+      //   promise.then((res) => {
+      //     console.log(res);
+      //   });
+      //   promise.then(
+      //     (res) => {
+      //       console.log(res);
+      //     },
+      //     (res) => {
+      //       console.error(res);
+      //     }
+      //   );
+
+      //   function timeout(ms) {
+      //     return new Promise((resolve, reject) => {
+      //       setTimeout(resolve, ms, "done");
+      //     });
+      //   }
+
+      //   timeout(1000).then((value) => {
+      //     console.log(value);
+      //   });
+
+      //   declare type hh={
+      //       type :1
+      //   }
+      //   console.log(hh)
+
+      // let p1 = new Promise(
+      //     (resolve,reject)=>{
+      //         resolve("成功");
+      //         reject("失败")
+      //     }
+      // )
+      // console.log('p1',p1)
+
+      // let p2 = new Promise(
+      //     (resolve,reject)=>{
+      //         reject("失败")
+
+      //         resolve("成功");
+      //     }
+      // )
+      // console.log('p2',p2)
+
+      // let p3 = new Promise(
+      //     (resolve,reject)=>{
+      //         // reject("失败");
+
+      //         // resolve("成功");
+      //         throw("报错")
+      //     }
+      // )
+      // console.log('p3',p3)
+
+      //   1.实现resolve和reject
+      //   class MyPromise {
+      //     constructor(executor) {
+      //       this.initValue();
+      //       // 初始化this
+      //       this.initValue();
+      //       this.initBind();
+      //       executor(this.resolve, this.reject);
+      //     }
+
+      //     initBind() {
+      //       this.resolve = this.resolve.bind(this);
+      //       this.reject = this.resolve.bind(this);
+      //     }
+
+      //     initValue() {
+      //       this.PromiseResult = null;
+      //       this.PromiseState = "pending";
+      //     }
+
+      //     resolve(value) {
+      //       this.PromiseState = "fullfilled";
+      //       this.PromiseState = value;
+      //     }
+
+      //     reject(reason) {
+      //       this.PromiseState = "rejected";
+      //       this.PromiseResult = reason;
+      //     }
+      //   }
+
+      //   const test1 = new MyPromise((resolve, reject) => {
+      //     resolve("成功");
+      //   });
+      //   console.log('test',test1)
+
+      //   const test2 = new MyPromise((resolve, reject) => {
+      //     reject('失败')
+      //   });
+      //   console.log('test',test2)
+      //  2.状态不可变
+      //     class MyPromise {
+      //     constructor(executor) {
+      //       this.initValue();
+      //       // 初始化this
+      //       this.initValue();
+      //       this.initBind();
+      //       executor(this.resolve, this.reject);
+      //     }
+
+      //     initBind() {
+      //       this.resolve = this.resolve.bind(this);
+      //       this.reject = this.resolve.bind(this);
+      //     }
+
+      //     initValue() {
+      //       this.PromiseResult = null;
+      //       this.PromiseState = "pending";
+      //     }
+
+      //     resolve(value) {
+      //         if(this.PromiseState !== 'pending') return
+      //       this.PromiseState = "fullfilled";
+      //       this.PromiseState = value;
+      //     }
+
+      //     reject(reason) {
+      // 		if(this.PromiseState !== 'pending') return
+      //       this.PromiseState = "rejected";
+      //       this.PromiseResult = reason;
+      //     }
+      //   }
+
+      //   const text1= new MyPromise((resolve,reject)=>{
+      //       resolve('成功');
+      //       reject('失败');
+      //   });
+
+      //   console.log(text1)
+
+      // 3.throw
+
+      // class MyPromise{
+      //     constructor(executor){
+      //         this.initVaule();
+      //         this.initBind();
+      //         try{
+      //             executor(this.resolve,this.reject);
+      //         }catch(e){
+      //             this.reject(e);
+      //         }
+
+      //     }
+
+      //     initVaule(){
+      //         this.PromiseResult=null;
+      //         this.PromiseState='pending'
+      //     }
+
+      //     initBind(){
+      //         this.resolve=this.resolve.bind(this);
+      //         this.reject=this.reject.bind(this)
+      //     }
+
+      //     resolve(value){
+      //         if(this.PromiseState!=='pending') return;
+      //         this.PromiseState='fulfilled';
+      //         this.PromiseResult=value;
+      //     }
+
+      //     reject(value){
+      //         if(this.PromiseState!=='pending') return;
+      //         this.PromiseState='rejected';
+      //         this.PromiseResult=value
+      //     }
+      // }
+      // const text3= new MyPromise((resolve,reject)=>{
+      //     throw("失败")
+      // })
+
+      // console.log(text3)
+
+      // 4.then
+
+      // const p1 = new Promise((resolve, resize) => {
+      //   resolve("成功");
+      // }).then(
+      //   (res) => console.log(res),
+      //   (error) => console.log(error)
+      // );
+
+      // const p2 = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     reject("失败");
+      //   });
+      // }).then(
+      //   (res) => console.log(res),
+      //   (error) => console.log(error)
+      // );
+
+      // // 链式调用
+      // const p3 =  new Promise(
+      //   (resolve,reject)=>{
+      //     resolve(100);
+      //   }
+      // ).then(res=>2*res,err=>console.log(err))
+      // .then(res=>console.log(res),err=>console.log(err))
+
+      // then
+      // class MyPromise {
+      //   constructor(executor){
+      //       this.initValue();
+      //       this.initBind();
+      //       try{
+      //         executor(this.resolve,this.reject)
+      //       } catch(e){
+      //         this.reject(e)
+      //       }
+      //   }
+
+      //   initValue(){
+      //     this.promiseState = "pending";
+      //     this.promiseResult = null;
+      //   }
+
+      //   initBind() {
+      //     this.resolve = this.resolve.bind(this);
+      //     this.reject = this.reject.bind(this);
+      //   }
+
+      //   resolve(val){
+      //     if(this.promiseState!=="pending") return;
+      //     this.promiseState= "fulfilled";
+      //     this.promiseResult = val;
+      //   }
+
+      //   reject(val){
+      //     if(this.promiseState!=="pending") return;
+
+      //     this.promiseState = "rejected";
+      //     this.promiseResult = val;
+      //   }
+
+      //   then(onFulfilled,onRejected){
+      //       onFulfilled = typeof onFulfilled==='function' ? onFulfilled:val=>val;
+      //       onRejected = typeof onRejected==='function' ? onRejected : reason=>{throw reason};
+
+      //       if(this.promiseState === 'fulfilled'){
+      //         // 如果当前为成功状态，执行第一个回调
+      //         onFulfilled(this.promiseState);
+      //         return "hh"
+      //       }else if(this.promiseState ==='rejected'){
+      //         onRejected(this.promiseResult)
+      //       }
+      //   }
+
+      // }
+      // const t5 = new MyPromise((resolve,reject)=>{
+      //   resolve("hh")
+      // }).then((res)=>{console.log(res)},(err)=>{console.error(err);})
+
+      // console.log(t5)
+
+      // 定时器情况
+      // class MyPromise {
+      //   constructor(executor) {
+      //     this.initValue();
+      //     this.initBind();
+      //     try {
+      //       executor(this.resolve, this.reject);
+      //     } catch (e) {
+      //       this.reject(e);
+      //     }
+      //   }
+      //   initValue() {
+      //     this.promiseState = "pending";
+      //     this.promiseResault = null;
+      //   }
+
+      //   initBind() {
+      //     this.reject=this.reject.bind(this);
+      //     this.resolve = this.resolve.bind(this);
+      //   }
+
+      //   resolve(val) {
+      //     if (this.promiseState !== "pending") return;
+
+      //     this.promiseState = "fulfilled";
+      //     this.promiseResault = val;
+      //   }
+
+      //   reject(val) {
+      //     if (this.promiseState !== "pending") return;
+      //     this.promiseResault = val;
+      //     this.promiseState = "rejected";
+      //   }
+
+      //   then(onFulfilled, onRejected) {
+      //     onFulfilled =
+      //       typeof onFulfilled === "function" ? onFulfilled : (val) => val;
+      //     onRejected =
+      //       typeof onRejected === "function" ? onRejected : (val) => val;
+
+      //     if (this.promiseState === "fulfilled") {
+      //       onFulfilled(this.promiseState);
+      //     }else if(this.promiseState === 'rejected'){
+      //       onRejected(this.promiseResault)
+      //     }
+      //   }
+      // }
+
+      // const p5 = new MyPromise((resolve,reject)=>{
+      //   setTimeout(()=>{
+      //     reject('失败')
+      //   },1000)
+      //   // reject('失败')
+      // }).then(
+      //   res => console.log(res),
+      //   err=>console.log(err)
+      //   )
+
+      // 实现
+      
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "build_learn",
+  "version": "1.0.0",
+  "description": "a package for learning build",
+  "private": true,
+  "author": "ajn404",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack  --config webpack.config.js"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "webpack": "^5.58.1",
+    "webpack-cli": "^4.9.0"
+  }
+}

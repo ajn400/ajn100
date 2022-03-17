@@ -1,0 +1,563 @@
+.qq-set-container{
+  position: fixed;
+  z-index:10;
+  &.left{
+    left:0;
+    .set-suspend-item{
+      .set-ul-style{
+        position: absolute;
+        opacity: 0;
+        left:-190px;
+        bottom:0;
+        &:before{
+          position:absolute;
+          //bottom:24px;
+          content:'';
+          border-right:16px solid red;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          border-left:0;
+          left:-16px;
+        }
+      }
+      .show-item{
+        // left:52px;
+        left: 20px;
+        opacity: 1;
+        transition: left 0.3s;
+      }
+      
+    }
+    &.qq_set_1{
+      .set-suspend-item{
+        .set-ul-style{
+
+          &:before{
+           border-right-color:#fff;
+          }
+        }
+        .inner-center{
+          left:48px;
+        }
+      }
+    }
+    &.qq_set_2{
+      .set-suspend-item{
+        .set-ul-style{
+          &:before{
+           border-right-color:#F6F7FA;
+          }
+        }
+        .inner-center{
+          left:40px;
+        }
+      }
+    }
+    &.qq_set_3{
+      .set-suspend-item{
+        .set-ul-style{
+          &:before{
+           border-right-color:rgba(0, 0, 0, 0.72);
+          }
+        }
+      }
+      .inner-center{
+        left:32px;
+      }
+    }
+  }
+  &.right{
+   right:0px;
+    .set-suspend-item{
+      .set-ul-style{
+        position: absolute;
+        opacity: 0;
+        bottom:0;
+        left:52px;
+        &:before{
+          right:-16px;
+          content: '';
+        }
+      }
+      .show-item{
+        // left:-190px;
+        left:0;
+        opacity: 1;
+        transition: left 0.3s;
+        border-width: 20px;
+        border-style:none;
+        // border-color:red;
+        //border-right:20px solid transparent;
+        box-sizing:content-box;
+      }
+    }
+    &.qq_set_1{
+      .set-suspend-item{
+        .set-ul-style{
+
+          &:before{
+           border-left-color:#fff;
+          }
+        }
+        .inner-center{
+          right:48px;
+        }
+      }
+    }
+    &.qq_set_2{
+      .set-suspend-item{
+        .set-ul-style{
+          &:before{
+           border-left-color:#F6F7FA;
+          }
+        }
+        .inner-center{
+          right:40px;
+        }
+      }
+    }
+    &.qq_set_3{
+      .set-suspend-item{
+        .set-ul-style{
+          &:before{
+           border-left-color:rgba(0, 0, 0, 0.72);
+          }
+        }
+        .inner-center{
+          right:32px;
+        }
+      }
+    }
+    .inner-center{
+      right:48px;
+    }
+  }
+  &.center{
+    top:50%;
+    transform: translate(0,-50%);
+  }
+  &.down{
+    bottom:20px;
+  }
+  .set-suspend-item{
+    width:48px;
+    height:48px;
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:last-child{
+      margin-bottom:0
+    }
+    .inner-center{
+      position: absolute;
+      // border: 1px solid red;
+      width: 190px;
+      // right: 48px;
+      height: 48px;
+      //display: none;
+    }
+    .set-ul-style{
+      width:170px;
+      box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.08);
+      
+      &:before{
+        position:absolute;
+        //bottom:24px;
+        border-left:16px solid red;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        //box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.08);
+      }
+    }
+    
+    .set-qq-icon{
+      width:24px;
+      height:24px;
+      display:block;
+    }
+    .suspend-qq-ul{ // qq 这边的显示位置
+      padding-top:16px;
+      padding-bottom:16px;
+      li{
+        display: flex;
+        a.item-link{
+          padding: 8px 13px;
+          flex:1;
+          display: flex;
+          align-items: center;
+          font-size:14px;
+          .qq-img{
+            width:24px;
+            height:24px;
+            border-radius:50%;
+            background: #EAECF1;
+            padding:5px;
+            margin-right:6px;
+            img{
+              // width:14px;
+              // height:14px;
+            }
+          }
+        }
+        &:last-child{
+          border-bottom:0;
+        }
+      }
+    }
+    .weixin{
+      // padding:30px 30px 0 30px;
+      width:170px;
+      // box-sizing:content-box;
+      .weixin-qcode{
+        width:110px;
+        height:110px;
+        margin:30px 30px 0 30px;
+      }
+      .weixin-desc{
+        font-size: 14px;
+        color:#333;
+        text-align:center;
+        margin: 16px 0;
+        overflow:hidden;
+      }
+    }
+    .phone-ul{
+      // padding:0 16px;
+      width:170px;
+      li{
+        border-bottom: 1px solid #ECECEC;
+        font-size: 14px;
+        display: flex;
+        padding:16px;
+        // margin:0 16px;
+        a.item-link{
+          color:#333;
+          .phone-name{
+            font-size:12px;
+          }
+          .phone-num{
+            font-size:14px;
+          }
+        }
+        &:last-child{
+          border-bottom:0;
+        }
+      }
+    }
+    .show-item{
+      left:52px;
+      opacity: 1;
+      transition: left 0.3s;
+      
+    }
+  }
+  &.qq_set_1{
+    .set-suspend-item{
+      background-color:#fff;
+      box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.08);
+      margin-bottom:10px;
+      border-radius: 50%;
+      .inner-center{
+        height:48px;
+      }
+      .set-ul-style{
+        background:#FCFCFD;
+        background-clip:padding-box;
+        &:before{
+          bottom:16px;
+        }
+      }
+      .suspend-qq-ul{ // qq 这边的显示位置
+        li{
+          a.item-link{
+            color: #333;
+            &:hover{
+              color: #2172F4;
+            }
+          }
+        }
+      }
+      .set-qq-icon{
+        background-image: url(../image/qq_set_icon12.png);
+      }
+      &-weixin{
+        .set-qq-icon{
+          background-position: -10px -10px;
+        }
+        
+      }
+      &-weixin:hover{
+        .set-qq-icon{
+          background-position: -10px -54px;
+        }
+      }
+      &-app{
+        .set-qq-icon{
+          background-position: -54px -10px;
+        }
+      }
+      &-app:hover{
+        .set-qq-icon{
+          background-position: -54px -54px;
+        }
+      }
+      &-feedback{
+        .set-qq-icon{
+          background-position: -98px -10px;
+        }
+      }
+      &-feedback:hover{
+        .set-qq-icon{
+          background-position: -98px -54px;
+        }
+      }
+      &-ttalk{
+        .set-qq-icon{
+          background-position: -142px -10px;
+        }
+      }
+      &-ttalk:hover{
+        .set-qq-icon{
+          background-position: -142px -54px;
+        }
+      }
+      &-phone{
+        .set-qq-icon{
+          background-position: -186px -10px;
+        }
+      }
+      &-phone:hover{
+        .set-qq-icon{
+          background-position: -186px -54px;
+        }
+      }
+      &-idcard{
+        .set-qq-icon{
+          background-position: -230px -10px;
+        }
+      }
+      &-idcard:hover{
+        .set-qq-icon{
+          background-position: -230px -54px;
+        }
+      }
+    }
+  }
+  &.qq_set_2{
+    .set-suspend-item{
+      width: 40px;
+      height: 40px;
+      background: #F6F7FA;
+      border-radius: 2px;
+      margin-bottom:4px;
+      .inner-center{
+        height:40px;
+      }
+      .set-ul-style{
+        background: #F6F7FA;;
+        &:before{
+          bottom:16px;
+        }
+      }
+      .suspend-qq-ul{ // qq 这边的显示位置
+        li{
+          a.item-link{
+            color: #333;
+            &:hover{
+              color: #2172F4;
+            }
+          }
+        }
+      }
+      &:last-child{
+        margin-bottom:0
+      }
+      &:hover{
+        background: #3884FD;
+      }
+      .set-qq-icon{
+        background-image: url(../image/qq_set_icon12.png);
+      }
+      &-weixin{
+        .set-qq-icon{
+          background-position: -10px -98px;
+        }
+        
+      }
+      &-weixin:hover{
+        .set-qq-icon{
+          background-position: -10px -142px;
+        }
+      }
+      &-app{
+        .set-qq-icon{
+          background-position: -54px -98px;
+        }
+      }
+      &-app:hover{
+        .set-qq-icon{
+          background-position: -54px -142px;
+        }
+      }
+      &-feedback{
+        .set-qq-icon{
+          background-position: -98px -98px;
+        }
+      }
+      &-feedback:hover{
+        .set-qq-icon{
+          background-position: -98px -142px;
+        }
+      }
+      &-ttalk{
+        .set-qq-icon{
+          background-position: -142px -98px;
+        }
+      }
+      &-ttalk:hover{
+        .set-qq-icon{
+          background-position: -142px -142px;
+        }
+      }
+      &-phone{
+        .set-qq-icon{
+          background-position: -186px -98px;
+        }
+      }
+      &-phone:hover{
+        .set-qq-icon{
+          background-position: -186px -142px;
+        }
+      }
+      &-idcard{
+        .set-qq-icon{
+          background-position: -230px -98px;
+        }
+      }
+      &-idcard:hover{
+        .set-qq-icon{
+          background-position: -230px -142px;
+        }
+      }
+    }
+  }
+  &.qq_set_3{
+    .set-suspend-item{
+      width: 32px;
+      height: 34px;
+      background:#fff;
+      .inner-center{
+        height:34px;
+      }
+      &:hover{
+        background: #F6F7F9;
+      }
+      .set-ul-style{
+        background: rgba(0, 0, 0, 0.72); 
+        &:before{
+          bottom:8px;
+        }
+      }
+      .suspend-qq-ul{ // qq 这边的显示位置
+        li{
+          a.item-link{
+            color: #fff;
+            .qq-img{
+              background: #EAECF1;
+            }
+            &:hover{
+              color: #5B9AFF;
+            }
+          }
+        }
+      }
+      .weixin{
+        .weixin-desc{
+          color:#fff;
+        }
+      }
+      .phone-ul{
+        li{
+          a.item-link{
+            color:#fff;
+          }
+        }
+      }
+      .set-qq-icon{
+        width:22px;
+        height:22px;
+        background-image: url(../image/qq_set_icon3.png);
+      }
+      &-weixin{
+        .set-qq-icon{
+          background-position: -10px -10px;
+        }
+        
+      }
+      &-weixin:hover{
+        .set-qq-icon{
+          background-position:  -50px -10px;
+        }
+      }
+      &-app{
+        .set-qq-icon{
+          background-position:  -90px -10px;
+        }
+      }
+      &-app:hover{
+        .set-qq-icon{
+          background-position: -300px -10px;
+        }
+      }
+      &-feedback{
+        .set-qq-icon{
+          background-position: -132px -10px;
+        }
+      }
+      &-feedback:hover{
+        .set-qq-icon{
+          background-position: -342px -10px;
+        }
+      }
+      &-ttalk{
+        .set-qq-icon{
+          background-position: -174px -10px;
+        }
+      }
+      &-ttalk:hover{
+        .set-qq-icon{
+          background-position: -384px -10px
+        }
+      }
+      &-phone{
+        .set-qq-icon{
+          background-position:  -216px -10px
+        }
+      }
+      &-phone:hover{
+        .set-qq-icon{
+          background-position: -426px -10px;
+        }
+      }
+      &-idcard{
+        .set-qq-icon{
+          background-position: -258px -10px;
+        }
+      }
+      &-idcard:hover{
+        .set-qq-icon{
+          background-position: -468px -10px;
+        }
+      }
+    }
+  }
+  
+}
+#ztbBtn{
+  display:none; // 智能名片
+}
+.ttalk-entrance{ // ttalk这边隐藏
+  display:none
+}

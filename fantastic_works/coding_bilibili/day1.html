@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                height: 100vh;
+            }
+        </style>
+    </head>
+    <body>
+
+        <canvas id="day1" width="600" height="600"></canvas>
+
+
+        <script>
+            let canvas = document.querySelector('canvas');
+            let context = canvas.getContext('2d');
+
+            context.fillStyle = 'blue';
+
+            context.lineWidth = 4;
+            context.beginPath();
+            context.rect(100, 100, 400, 400)
+            // context.stroke();
+
+            context.beginPath();
+            context.arc(300, 300, 100, 0, Math.PI * 2);
+            // context.stroke();
+
+
+            let width = 60;
+            let height = 60;
+            let gap = 20;
+
+            for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < 5; j++) {
+
+                    let x = 100 + (width + gap) * i;
+                    let y = 100 + (height + gap) * j;
+
+                    context.beginPath();
+                    context.rect(x, y, width, height);
+                    context.stroke()
+
+                    if (i > 0 && i < 4 && j > 0 && j < 4) {
+                        context.rect(x + 10, y + 10, width - 20, height - 20)
+                        if (i !== 2 || j != 2) 
+                            context.stroke()
+                        
+                    }
+
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+.wrapper {
+    width: 300px;
+    height: 300px;
+    border: 1px dashed red;
+    margin: 50px auto 0;
+}
+
+.inner {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+
+}
+
+.translate {
+    /* transform: translate(100px); */
+    /* transform: translate(-50px); */
+    /* transform: translate(0,50px); */
+    /* transform: translateX(30px); */
+    transform: rotate(20deg);
+    transform-origin: 50% 50%;
+    
+}
+.translate:last-child{
+    transform:translateY(-302px) rotate(20deg);
+    transform-origin: top left;
+    transform-origin: 0 0;
+    /* 一个意思 */
+    border: 1px solid green;
+}
+
+
+.scale{
+    /* transform: scale(1.1,1.1); */
+    /* transform: scale(1.1); */
+    /* transform: scale(1.1,0.9); */
+    transform: scaleX(2) scaleY(1.1);
+}

@@ -2,5 +2,11 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/fantastic_works/gsap_ex/gsap_ex" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/fantastic_works/vue-project" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/fantastic_works/vue-project/dist" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/framework/micro-book/micro-ex/qiankun-micro-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/framework/react-book" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/framework/vue-book" vcs="Git" />
   </component>
 </project>
